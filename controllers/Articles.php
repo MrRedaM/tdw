@@ -13,8 +13,6 @@ class Articles extends Controller{
 
     public function read($id){
         $article = $this->ArticleModel->getArticleById($id);
-        //var_dump($article);
-        //die();
         $this->render('article', compact('article'));
     }
 
