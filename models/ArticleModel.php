@@ -18,5 +18,8 @@ class ArticleModel extends Model{
         return $this->request($sql);
     }
 
-
+    public function delete($id){
+        $sql = "DELETE FROM ".$this->articleTable." WHERE id=".$id;
+        return $this->request($sql);
+    }
 }
