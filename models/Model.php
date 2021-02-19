@@ -26,13 +26,21 @@ abstract class Model {
 
     public function request(string $sql){
         $query = $this->_connexion->prepare($sql);
-        $query->execute();
+        try{
+            $query->execute();
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
         return $query->fetch();
     }
 
     public function requestAll(string $sql){
         $query = $this->_connexion->prepare($sql);
-        $query->execute();
+        try{
+            $query->execute();
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
         return $query->fetchAll();
     }
 

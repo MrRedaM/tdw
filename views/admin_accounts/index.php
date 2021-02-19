@@ -1,7 +1,9 @@
 <h2>Gestion des comptes</h2>
 
 <form method='post'>
-    <select name="type" id="type">
+    <input type="search" name="search" id="search" placeholder="Rechercher..." value="<?= $_POST['search'] ?>">
+    <select name="type" id="type" value="<?= $_POST['type'] ?>">
+        <option value="type" selected hidden disabled>Type</option>
         <option value="all">Tous</option>
         <option value="teachers">Enseignants</option>
         <option value="students">Etudiants</option>
@@ -10,12 +12,8 @@
     <input type="submit" value="Filtrer">
 </form>
 
-<form method="post" action="admin_accounts/new">
+<form method="post" action="<?= PRE ?>/admin_accounts/new">
     <input type="submit" value="Nouveau compte">
-</form>
-
-<form method="post">
-    <input type="search" name="search" id="search" placeholder="Rechercher..." value="<?= $_POST['search'] ?>">
 </form>
 
 <table>
@@ -56,7 +54,7 @@
                     <form method="post" action="admin_accounts/edit_teacher/<?= $person['id'] ?>">
                         <input type="submit" value="Modifier">
                     </form>
-                    <form method="post" action="admin_presentation/delete_teacher/<?= $person['id'] ?>">
+                    <form method="post" action="<?= PRE ?>/admin_accounts/delete/<?= $person['id'] ?>">
                         <input type="submit" value="Supprimer">
                     </form>
                 </td>

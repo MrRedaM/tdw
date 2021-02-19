@@ -12,11 +12,11 @@ class Admin_accounts extends Controller{
         }
         $persons = null;
         if(!isset($_POST['type'])){
-            $persons = $this->AccountModel->getAll($order, $search);
+            $persons = $this->AccountModel->getPersons($order, $search);
         }else{
             switch($_POST['type']){
                 case 'all':
-                    $persons = $this->AccountModel->getAll($order, $search);
+                    $persons = $this->AccountModel->getPersons($order, $search);
                     break;
                 case 'teachers':
                     $persons = $this->AccountModel->getTeachers($order, $search);
@@ -36,9 +36,23 @@ class Admin_accounts extends Controller{
         $this->render('new');
     }
 
-    public function applyNew(){
-        $result = $this->PresentationModel->insert($_POST['index'], $_POST['content']);
-        header("Location: ".PRE."/admin_presentation");
+    public function apply_new(){
+        $_POST['search'] = $_POST['mail'];
+        $result = $this->AccountModel->insertPerson($_POST['last_name'], $_POST['first_name'],
+            $_POST['mail'], $_POST['address'], $_POST['phone1'], $_POST['phone2'], $_POST['phone3']);
+        $id = $this->AccountModel->getPersonIdByMail($_POST['mail']);
+        switch($_POST['type']){
+            case 'teacher':
+                $this->AccountModel->insertTeacher($id['id']);
+                break;
+            case 'student':
+                $this->AccountModel->insertStudent($id['id']);
+                break;
+            case 'tutor':
+                $this->AccountModel->insertTutor($id['id']);
+                break;
+        }
+        header("Location: ".PRE."/admin_accounts");
     }
 
     public function edit($id){
@@ -52,8 +66,8 @@ class Admin_accounts extends Controller{
     }
 
     public function delete($id){
-        $result = $this->PresentationModel->delete($id);
-        header("Location: ".PRE."/admin_presentation");
+        $result = $this->AccountModel->deletePerson($id);
+        header("Location: ".PRE."/admin_accounts");
     }
 
 }
