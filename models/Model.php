@@ -36,7 +36,7 @@ abstract class Model {
         return $query->fetchAll();
     }
 
-    public function getAll(string $order = ""){
+    public function getAll(string $order = "", string $search = ""){
         $sql = "SELECT * FROM ".$this->table;
         if($order != ""){
             $sql = $sql." ORDER BY ".$order;

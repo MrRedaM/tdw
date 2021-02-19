@@ -6,27 +6,30 @@ class Admin_accounts extends Controller{
         $this->loadModel('AccountModel');
     }
 
-    public function index(){
-        //$paragraphs = $this->PresentationModel->getAll('p_index');
-        $this->render('index', compact('paragraphs'));
-    }
-
-    public function teachers(string $order = "", string $search = ""){
+    public function index(string $order = "", string $search = ""){
         if(isset($_POST['search'])){
             $search = $_POST['search'];
         }
-        $teachers = $this->AccountModel->getTeachers($order, $search);
-        $this->render('teachers', compact('teachers'));
-    }
-
-    public function students(){
-        //$paragraphs = $this->PresentationModel->getAll('p_index');
-        $this->render('index', compact('paragraphs'));
-    }
-
-    public function tutors(){
-        //$paragraphs = $this->PresentationModel->getAll('p_index');
-        $this->render('index', compact('paragraphs'));
+        $persons = null;
+        if(!isset($_POST['type'])){
+            $persons = $this->AccountModel->getAll($order, $search);
+        }else{
+            switch($_POST['type']){
+                case 'all':
+                    $persons = $this->AccountModel->getAll($order, $search);
+                    break;
+                case 'teachers':
+                    $persons = $this->AccountModel->getTeachers($order, $search);
+                    break;
+                case 'students':
+                    $persons = $this->AccountModel->getStudents($order, $search);
+                    break;
+                case 'tutors':
+                    $persons = $this->AccountModel->getTutors($order, $search);
+                    break;
+            }   
+        }
+        $this->render('index', compact('persons'));
     }
 
     public function new(){

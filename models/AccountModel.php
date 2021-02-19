@@ -10,6 +10,7 @@ class AccountModel extends Model{
 
     public function __construct(){
         $this->getConnection();
+        $this->table = $this->personTable;
     }
 
     public function getTeachers(string $order = "", string $search = ""){
@@ -18,6 +19,30 @@ class AccountModel extends Model{
             $sql = $sql."(first_name LIKE '%".$search."%' OR last_name LIKE '%".$search."%' OR mail LIKE '%".$search."%') AND ";
         }
         $sql = $sql. "id IN (SELECT id FROM ".$this->teacherTable.")";
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->requestAll($sql);
+    }
+
+    public function getStudents(string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->personTable." WHERE ";
+        if($search != ""){
+            $sql = $sql."(first_name LIKE '%".$search."%' OR last_name LIKE '%".$search."%' OR mail LIKE '%".$search."%') AND ";
+        }
+        $sql = $sql. "id IN (SELECT id FROM ".$this->studentTable.")";
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->requestAll($sql);
+    }
+
+    public function getTutors(string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->personTable." WHERE ";
+        if($search != ""){
+            $sql = $sql."(first_name LIKE '%".$search."%' OR last_name LIKE '%".$search."%' OR mail LIKE '%".$search."%') AND ";
+        }
+        $sql = $sql. "id IN (SELECT id FROM ".$this->tutorTable.")";
         if($order != ""){
             $sql = $sql." ORDER BY ".$order;
         }
