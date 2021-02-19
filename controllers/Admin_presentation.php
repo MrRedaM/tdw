@@ -7,7 +7,7 @@ class Admin_presentation extends Controller{
     }
 
     public function index(){
-        $paragraphs = $this->PresentationModel->getAll();
+        $paragraphs = $this->PresentationModel->getAll('p_index');
         $this->render('index', compact('paragraphs'));
     }
 
