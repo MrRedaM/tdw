@@ -22,4 +22,10 @@ class ArticleModel extends Model{
         $sql = "DELETE FROM ".$this->articleTable." WHERE id=".$id;
         return $this->request($sql);
     }
+
+    public function insert($title, $desc){
+        $sql = "INSERT INTO ".$this->articleTable." (`id`, `title`, `description`) 
+        VALUES (NULL, '".$title."', '".$desc."')";
+        return $this->request($sql);
+    }
 }

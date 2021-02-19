@@ -1,6 +1,7 @@
 <?php
     // Constante contient le chemin du dossier racine de index.php
     define('ROOT', str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']));
+    define('PRE', '/tdw');
 
     require_once(ROOT.'models/Model.php');
     require_once(ROOT.'controllers/Controller.php');

@@ -17,16 +17,22 @@ class Admin_articles extends Controller{
     }
 
     public function new(){
-        echo 'new article please';
+        $this->render('new');
+    }
+
+    public function applyNew(){
+        $result = $this->ArticleModel->insert($_POST['article_title'], $_POST['article_desc']);
+        header("Location: ".PRE."/admin_articles");
     }
 
     public function edit(){
-        echo 'edit '.$_POST['id_article'];
+        $article = $this->ArticleModel->getArticleById($id);
+        $this->render('new', compact('article'));
     }
 
     public function delete(){
         $result = $this->ArticleModel->delete($_POST['id_article']);
-        header("Location: /tdw/admin_articles");
+        header("Location: ".PRE."/admin_articles");
     }
 
 }
