@@ -3,16 +3,11 @@
 class Admin_articles extends Controller{
 
     public function __construct(){
-        if($_SERVER['REMOTE_ADDR'] != '127.0.0.1'){
-            http_response_code(404);
-            echo 'Erreur 404: Page introuvable';
-            exit();
-        }
         $this->loadModel('ArticleModel');
     }
 
     public function index(){
-        $articles = $this->ArticleModel->getAllArticles();
+        $articles = $this->ArticleModel->getAll();
         $this->render('index', compact('articles'));
     }
 
@@ -26,7 +21,7 @@ class Admin_articles extends Controller{
     }
 
     public function edit($id){
-        $article = $this->ArticleModel->getArticleById($id);
+        $article = $this->ArticleModel->findById($id);
         $this->render('edit', compact('article'));
     }
 

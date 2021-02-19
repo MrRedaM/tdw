@@ -17,7 +17,6 @@
                 </td>
                 <td>
                     <form method="post" action="admin_articles/edit/<?= $article['id'] ?>">
-                        <!--input type="text" hidden name="id_article" id="id_article" value="<?= $article['id'] ?>"-->
                         <input type="submit" value="Modifier">
                     </form>
                     <form method="post" action="admin_articles/delete">

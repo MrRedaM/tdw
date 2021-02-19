@@ -8,6 +8,8 @@ abstract class Model {
 
     protected $_connexion;
 
+    public $table;
+
     public function getConnection(){
         // On supprime la connexion précédente
         $this->_connexion = null;
@@ -32,6 +34,16 @@ abstract class Model {
         $query = $this->_connexion->prepare($sql);
         $query->execute();
         return $query->fetchAll();
+    }
+
+    public function getAll(){
+        $sql = "SELECT * FROM ".$this->table;
+        return $this->requestAll($sql);
+    }
+
+    public function findById($id){
+        $sql = "SELECT * FROM ".$this->table." WHERE id=".$id;
+        return $this->request($sql);
     }
 
 }
