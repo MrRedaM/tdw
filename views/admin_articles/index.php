@@ -16,8 +16,8 @@
                 <h3><a target="_blank" href="articles/read/<?= $article['id'] ?>"><?= $article['title'] ?></a></h3>
                 </td>
                 <td>
-                    <form method="post" action="admin_articles/edit">
-                        <input type="text" hidden name="id_article" id="id_article" value="<?= $article['id'] ?>">
+                    <form method="post" action="admin_articles/edit/<?= $article['id'] ?>">
+                        <!--input type="text" hidden name="id_article" id="id_article" value="<?= $article['id'] ?>"-->
                         <input type="submit" value="Modifier">
                     </form>
                     <form method="post" action="admin_articles/delete">

@@ -28,4 +28,11 @@ class ArticleModel extends Model{
         VALUES (NULL, '".$title."', '".$desc."')";
         return $this->request($sql);
     }
+
+    public function update($id, $title, $desc){
+        $sql = "UPDATE ".$this->articleTable."
+        SET title = '".$title."', description = '".$desc."' 
+        WHERE id = ".$id;
+        return $this->request($sql);
+    }
 }

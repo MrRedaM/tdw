@@ -25,9 +25,14 @@ class Admin_articles extends Controller{
         header("Location: ".PRE."/admin_articles");
     }
 
-    public function edit(){
+    public function edit($id){
         $article = $this->ArticleModel->getArticleById($id);
-        $this->render('new', compact('article'));
+        $this->render('edit', compact('article'));
+    }
+
+    public function applyEdit($id){
+        $result = $this->ArticleModel->update($id, $_POST['article_title'], $_POST['article_desc']);
+        header("Location: ".PRE."/admin_articles");
     }
 
     public function delete(){
