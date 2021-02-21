@@ -1,6 +1,6 @@
-<h1>Bienvenue dans la page d'acceuil!</h1>
+<h2>Accueil</h2>
 
-<h2>Liste des articles</h2>
+<h3>Actualités</h3>
 
 <?php foreach($articles as $article): ?>
     <h3><a href="articles/read/<?= $article['id'] ?>"><?= $article['title'] ?></a></h3>
