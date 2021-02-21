@@ -19,7 +19,7 @@
 <table>
     <thead>
         <th>Nom</th>
-        <th>Présnom</th>
+        <th>Prénom</th>
         <th>E-mail</th>
         <th>Adresse</th>
         <th>Téléphone 1</th>
