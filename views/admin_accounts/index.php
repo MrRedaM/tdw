@@ -51,7 +51,7 @@
                     <?= $person['phone3'] ?>
                 </td>
                 <td>
-                    <form method="post" action="admin_accounts/edit_teacher/<?= $person['id'] ?>">
+                    <form method="post" action="admin_accounts/edit/<?= $person['id'] ?>">
                         <input type="submit" value="Modifier">
                     </form>
                     <form method="post" action="<?= PRE ?>/admin_accounts/delete/<?= $person['id'] ?>">

@@ -24,15 +24,36 @@ class AccountModel extends Model{
         return $this->request($sql);
     }
 
+    public function updatePerson($id, $last, $first, $mail, $address, $phone1, $phone2, $phone3){
+        $sql = "UPDATE ".$this->personTable."
+        SET last_name = '".$last."', first_name = '".$first."', address = '".$address."', phone1 = '".$phone1."', phone2 = '".$phone2."', phone3 = '".$phone3."'
+        WHERE id = ".$id;
+        return $this->request($sql);
+    }
+
     public function insertTeacher($id){
         $sql = "INSERT INTO ".$this->teacherTable." (`id`) 
         VALUES (".$id.")";
         return $this->request($sql);
     }
 
+    public function updateTeacher($id){
+        $sql = "UPDATE ".$this->teacherTable."
+        SET title = '".$title."', description = '".$desc."' 
+        WHERE id = ".$id;
+        return $this->request($sql);
+    }
+
     public function insertStudent($id){
         $sql = "INSERT INTO ".$this->studentTable." (`id`) 
         VALUES (".$id.")";
+        return $this->request($sql);
+    }
+
+    public function updateStudent($id, $class_id){
+        $sql = "UPDATE ".$this->studentTable."
+        SET classroom = ".$class_id."
+        WHERE id = ".$id;
         return $this->request($sql);
     }
 
@@ -102,6 +123,26 @@ class AccountModel extends Model{
             return $this->request($sql);
         }
         return null;
+    }
+
+    public function getTeacherById($id){
+        $sql = "SELECT * FROM ".$this->teacherTable." WHERE id=".$id;
+        return $this->request($sql);
+    }
+
+    public function getStudentById($id){
+        $sql = "SELECT * FROM ".$this->studentTable." WHERE id=".$id;
+        return $this->request($sql);
+    }
+
+    public function getTutorById($id){
+        $sql = "SELECT * FROM ".$this->tutorTable." WHERE id=".$id;
+        return $this->request($sql);
+    }
+
+    public function isTeacher($id){
+        $sql = "SELECT id FROM ".$this->teacherTable;
+        return count($this->request($sql)) == 1;
     }
 
 }

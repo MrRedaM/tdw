@@ -4,6 +4,7 @@ class Admin_accounts extends Controller{
 
     public function __construct(){
         $this->loadModel('AccountModel');
+        $this->loadModel('ClassroomModel');
     }
 
     public function index(string $order = "", string $search = ""){
@@ -56,13 +57,40 @@ class Admin_accounts extends Controller{
     }
 
     public function edit($id){
-        $p = $this->PresentationModel->findById($id);
-        $this->render('edit', compact('p'));
+        $person = $this->AccountModel->findById($id);
+        $type = $this->AccountModel->getTeacherById($id);
+        $person['type'] = 'teacher';
+        if($type == false) {
+            $type = $this->AccountModel->getStudentById($id);
+            $person['type'] = 'student';
+        }
+        if($type == false) {
+            $type = $this->AccountModel->getTutorById($id);
+            $person['type'] = 'tutor';
+        }
+
+        $classrooms = $this->ClassroomModel->getAll();
+
+
+        $this->render('edit', compact('person', 'type', 'classrooms'));
     }
 
-    public function applyEdit($id){
-        $result = $this->PresentationModel->update($id, $_POST['index'], $_POST['content']);
-        header("Location: ".PRE."/admin_presentation");
+    public function apply_edit($type, $id){
+        $result = $this->AccountModel->updatePerson($id, $_POST['last_name'], $_POST['first_name']
+            , $_POST['mail'], $_POST['address']
+            , $_POST['phone1'], $_POST['phone2'], $_POST['phone3']);
+        switch($type){
+            case 'teacher':
+
+                break;
+            case 'student':
+                $result = $this->AccountModel->updateStudent($id, $_POST['class_id']);
+                break;
+            case 'teacher':
+
+                break;
+        }
+        header("Location: ".PRE."/admin_accounts");
     }
 
     public function delete($id){
