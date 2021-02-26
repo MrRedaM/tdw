@@ -9,9 +9,9 @@ class ArticleModel extends Model{
         $this->table = $this->articleTable;
     }
 
-    public function insert($title, $desc){
-        $sql = "INSERT INTO ".$this->articleTable." (`id`, `title`, `description`) 
-        VALUES (NULL, '".$title."', '".$desc."')";
+    public function insert($title, $desc, $image){
+        $sql = "INSERT INTO ".$this->articleTable." (`id`, `title`, 'image', `description`) 
+        VALUES (NULL, '".$title."', '".$image."', '".$desc."')";
         return $this->request($sql);
     }
 

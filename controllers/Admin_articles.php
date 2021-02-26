@@ -16,8 +16,16 @@ class Admin_articles extends Controller{
     }
 
     public function applyNew(){
-        $result = $this->ArticleModel->insert($_POST['article_title'], $_POST['article_desc']);
-        header("Location: ".PRE."/admin_articles");
+        $file = "res/images/".basename($_FILES['image']['name']);
+        if(move_uploaded_file($_FILES['image']['tmp_name'], $file)){
+            //$result = $this->ArticleModel->insert($_POST['article_title'], $_POST['article_desc'], $_POST['image']);
+            //header("Location: ".PRE."/admin_articles");
+            echo "success";
+        }else{
+            var_dump($_FILES['image']['tmp_name']);
+            var_dump($file);
+        }
+        
     }
 
     public function edit($id){

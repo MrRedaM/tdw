@@ -4,7 +4,7 @@
     <?php foreach($articles as $article): ?>
     <div class="article">
         <div class="article_image">
-            <img src="<?= PRE ?>/res/images/<?= $article['image'] ?>" alt="">
+            <a href=""><img src="<?= PRE ?>/res/images/<?= $article['image'] ?>" onerror="this.src='/tdw/res/images/default.png';"></a>
         </div>
         
         <div class="article_text">
