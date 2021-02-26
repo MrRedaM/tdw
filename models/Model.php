@@ -11,10 +11,8 @@ abstract class Model {
     public $table;
 
     public function getConnection(){
-        // On supprime la connexion précédente
         $this->_connexion = null;
 
-        // On essaie de se connecter à la base
         try{
             $dsn = "mysql:dbname=".$this->db_name."; host=".$this->host.";";
             $this->_connexion = new PDO($dsn, $this->username, $this->password);
