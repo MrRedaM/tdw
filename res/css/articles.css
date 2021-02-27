@@ -35,7 +35,10 @@
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
     transition: 0.5s;
-    background: url("/tdw/res/images/default.png") no-repeat scroll 0 0;
+}
+
+.article img:hover{
+    transform: translateY(10px);
 }
 
 .article:hover img{
@@ -63,8 +66,9 @@
     line-clamp: 2;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
+    box-orient: vertical;
     margin: 1em 0 0.8em 0;
-    font-family: '#Montserrat-Light';
+    font-family: 'Montserrat-Light';
     color: darkslategray;
 }
 
@@ -78,4 +82,59 @@
 .article:hover p + a{
     margin-left: 1em;
     transition: 0.5s;
+}
+
+.pages{
+    display: flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    padding: 2em;
+    margin: auto 0;
+    justify-content: center;
+    gap: 1em;
+}
+
+.pages a{
+    text-decoration: none;
+    color: dodgerblue;
+    padding: 0 0.5em 0 0.5em;
+}
+
+.pages a[data-current="true"]{
+    color: white;
+    border-radius: 4em;
+    background-color: dodgerblue;
+}
+
+.pages p{
+    margin: auto 0;
+    font-family: 'Montserrat-SemiBold';
+}
+
+/* Read page ========================================================== */
+
+.read_image{
+    width: 100%;
+    height: auto;
+}
+
+.read_text{
+    background-color: white;
+    padding: 2em;
+    margin: auto;
+}
+
+.read_title{
+    padding: 1em 0 2em 0;
+}
+
+.read_title h1{
+    font-family: 'Montserrat-ExtraBold', 'Montserrat-SemiBold';
+}
+
+.read_text p{
+    font-family: 'Montserrat-Medium';
+    text-align: justify;
+    text-justify: inter-word;
 }

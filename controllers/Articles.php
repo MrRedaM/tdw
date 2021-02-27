@@ -6,9 +6,17 @@ class Articles extends Controller{
         $this->loadModel('ArticleModel');
     }
 
-    public function index(){
-        $articles = $this->ArticleModel->getAll();
-        $this->render('index', compact('articles'));
+    public function index(int $page = 1){
+        $all = $this->ArticleModel->getAll("id DESC");
+        $articles = [];
+        for($i = ($page * 8 - 8); $i < ($page * 8); $i++){
+            if(!isset($all[$i])){
+                break;
+            }
+            $articles[$i] = $all[$i];
+        }
+        $pages = ceil(count($all) / 8);
+        $this->render('index', compact('articles', 'pages', 'page'));
     }
 
     public function read($id){

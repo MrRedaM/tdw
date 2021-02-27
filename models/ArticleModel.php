@@ -10,7 +10,7 @@ class ArticleModel extends Model{
     }
 
     public function insert($title, $desc, $image){
-        $sql = "INSERT INTO ".$this->articleTable." (`id`, `title`, 'image', `description`) 
+        $sql = "INSERT INTO ".$this->articleTable." (`id`, `title`, `image`, `description`) 
         VALUES (NULL, '".$title."', '".$image."', '".$desc."')";
         return $this->request($sql);
     }
