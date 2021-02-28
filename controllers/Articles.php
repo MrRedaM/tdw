@@ -4,6 +4,7 @@ class Articles extends Controller{
 
     public function __construct(){
         $this->loadModel('ArticleModel');
+        $this->loadModel('TagModel');
     }
 
     public function index(int $page = 1){
@@ -20,8 +21,9 @@ class Articles extends Controller{
     }
 
     public function read($id){
+        $tags = $this->TagModel->getAll();
         $article = $this->ArticleModel->findById($id);
-        $this->render('article', compact('article'));
+        $this->render('article', compact('article', 'tags'));
     }
 
 }

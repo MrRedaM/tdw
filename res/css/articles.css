@@ -99,18 +99,28 @@
     text-decoration: none;
     color: dodgerblue;
     padding: 0 0.5em 0 0.5em;
+    transition: 0.3s;
 }
 
 .pages a[data-current="true"]{
     color: white;
     border-radius: 4em;
     background-color: dodgerblue;
+    transition: 0.3s;
+}
+
+.pages a:hover{
+    padding: 0 1em 0 1em;
+    transform: scale(1.3);
+    transition: 0.3s;
 }
 
 .pages p{
     margin: auto 0;
     font-family: 'Montserrat-SemiBold';
 }
+
+
 
 /* Read page ========================================================== */
 
@@ -119,22 +129,47 @@
     height: auto;
 }
 
-.read_text{
+.read_article{
     background-color: white;
-    padding: 2em;
-    margin: auto;
+    margin: 1em;
+    border-radius: 1em;
 }
 
-.read_title{
-    padding: 1em 0 2em 0;
+.read_header{
+    padding: 2em;
+    display: flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.tags{
+    margin: auto 0;
+}
+
+.tags a{
+    text-decoration: none;
+    font-family: 'Montserrat-SemiBold';
+    color: darkslategray;
+    border: darkslategray solid 3px;
+    border-radius: 1em;
+    padding: 0 0.5em 0 0.5em;
 }
 
 .read_title h1{
     font-family: 'Montserrat-ExtraBold', 'Montserrat-SemiBold';
 }
 
-.read_text p{
+.read_title p{
+    font-family: 'Montserrat-Light';
+    color: darkslategray;
+}
+
+.read_text{
+    padding: 2em;
     font-family: 'Montserrat-Medium';
     text-align: justify;
     text-justify: inter-word;
+    line-height: 1.6;
 }

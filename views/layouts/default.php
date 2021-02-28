@@ -7,6 +7,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/tdw/res/css/style.css">
     <link rel="stylesheet" href="/tdw/res/css/articles.css">
+    <link rel="stylesheet" href="/tdw/res/css/presentation.css">
     
 </head>
 
@@ -21,7 +22,7 @@
         <div class="top_menu">
             <ul>
                 <li><a href="<?= PRE ?>/articles">Accueil</a></li>
-                <li><a href="">Présentation</a></li>
+                <li><a href="<?= PRE ?>/presentation">Présentation</a></li>
                 <li><a href="">Cycles</a>
                     <ul>
                         <li><a href="">Primaire</a></li>

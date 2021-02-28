@@ -1,0 +1,30 @@
+.presentation{
+    background-color: white;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.presentation h1{
+    font-family: 'Montserrat-ExtraBold';
+    text-align: center;
+    padding: 1em 0 1em 0;
+    margin: auto;
+}
+
+.paragraph{
+    padding: 1em 0 1em 0;
+}
+
+.paragraph p{
+    font-family: 'Montserrat-Medium';
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.paragraph img{
+    width: 100%;
+    height: auto;
+    padding: 1em 0 2em 0;
+}

@@ -5,6 +5,7 @@
 
     require_once(ROOT.'models/Model.php');
     require_once(ROOT.'controllers/Controller.php');
+    require_once(ROOT.'utils/TagUtils.php');
 
     
     $params = explode('/', $_GET['p']);

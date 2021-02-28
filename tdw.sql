@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 27, 2021 at 02:24 PM
+-- Generation Time: Feb 28, 2021 at 01:38 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -48,20 +48,26 @@ CREATE TABLE `Article` (
   `id` int(16) NOT NULL,
   `title` varchar(32) NOT NULL,
   `image` varchar(100) NOT NULL DEFAULT 'default.png',
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `tags` varchar(100) NOT NULL DEFAULT '#1#',
+  `created` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `Article`
 --
 
-INSERT INTO `Article` (`id`, `title`, `image`, `description`) VALUES
-(1, 'Article 1', 'image1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lectus justo, id imperdiet neque ultrices eu. Phasellus imperdiet odio non dolor tempor lacinia. Donec faucibus sit amet arcu at sollicitudin. Aenean facilisis sed ante eu placerat. Morbi sollicitudin velit nisl, posuere viverra turpis volutpat vel. Maecenas aliquet tellus et libero scelerisque suscipit. Nunc eleifend, ante vitae ornare elementum, mauris nulla porttitor lectus, ut mollis purus mi vitae nulla. In hac habitasse platea dictumst.'),
-(2, 'Article 2', 'image2.jpg', 'Ut ut tortor ex. Pellentesque ultrices vel turpis et ultrices. Nunc venenatis nisl at posuere gravida. Curabitur ultrices dui turpis, non vehicula urna molestie quis. Donec vitae orci pulvinar, posuere ex sit amet, viverra purus. Phasellus a elit metus. Curabitur in molestie libero, quis facilisis mauris. Etiam viverra orci et ipsum pellentesque volutpat. Aliquam pretium turpis ac velit tempus, eu euismod lorem facilisis. Suspendisse ut venenatis lacus. In porta est lacinia dapibus faucibus. In mollis fermentum urna eu hendrerit.'),
-(12, 'Article 3', 'image3.jpg', 'Donec tincidunt finibus est eget eleifend. Duis condimentum non augue id iaculis. Integer quis tempor leo. Sed viverra gravida eros vitae imperdiet. Duis semper, sapien ut porta gravida, libero metus cursus neque, vel aliquet ante ex vel libero. Praesent lectus felis, pulvinar in sagittis a, aliquet sed augue. Duis vel diam fringilla neque dictum bibendum nec at magna. Pellentesque vehicula tellus eu condimentum gravida. Nullam pulvinar vel sapien sit amet pretium. Quisque quis neque a risus accumsan mattis. Nulla fermentum justo vitae ullamcorper cursus. Cras tincidunt mi non rutrum congue. Curabitur porttitor ipsum ligula, sed porta nunc ultricies quis. Quisque augue dolor, faucibus vitae gravida ac, porttitor iaculis orci. '),
-(17, 'Article 4', 'image4.jpg', 'Ut ut tortor ex. Pellentesque ultrices vel turpis et ultrices. Nunc venenatis nisl at posuere gravida. Curabitur ultrices dui turpis, non vehicula urna molestie quis. Donec vitae orci pulvinar, posuere ex sit amet, viverra purus. Phasellus a elit metus. Curabitur in molestie libero, quis facilisis mauris. Etiam viverra orci et ipsum pellentesque volutpat. Aliquam pretium turpis ac velit tempus, eu euismod lorem facilisis. Suspendisse ut venenatis lacus. In porta est lacinia dapibus faucibus. In mollis fermentum urna eu hendrerit.'),
-(18, 'Article 5', 'default.png', 'Donec tincidunt finibus est eget eleifend. Duis condimentum non augue id iaculis. Integer quis tempor leo. Sed viverra gravida eros vitae imperdiet. Duis semper, sapien ut porta gravida, libero metus cursus neque, vel aliquet ante ex vel libero. Praesent lectus felis, pulvinar in sagittis a, aliquet sed augue. Duis vel diam fringilla neque dictum bibendum nec at magna. Pellentesque vehicula tellus eu condimentum gravida. Nullam pulvinar vel sapien sit amet pretium. Quisque quis neque a risus accumsan mattis. Nulla fermentum justo vitae ullamcorper cursus. Cras tincidunt mi non rutrum congue. Curabitur porttitor ipsum ligula, sed porta nunc ultricies quis. Quisque augue dolor, faucibus vitae gravida ac, porttitor iaculis orci. '),
-(19, 'Article 6', 'default.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lectus justo, id imperdiet neque ultrices eu. Phasellus imperdiet odio non dolor tempor lacinia. Donec faucibus sit amet arcu at sollicitudin. Aenean facilisis sed ante eu placerat. Morbi sollicitudin velit nisl, posuere viverra turpis volutpat vel. Maecenas aliquet tellus et libero scelerisque suscipit. Nunc eleifend, ante vitae ornare elementum, mauris nulla porttitor lectus, ut mollis purus mi vitae nulla. In hac habitasse platea dictumst.');
+INSERT INTO `Article` (`id`, `title`, `image`, `description`, `tags`, `created`) VALUES
+(1, 'Article 1', 'image1.jpg', '    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lectus justo, id imperdiet neque ultrices eu. Phasellus imperdiet odio non dolor tempor lacinia. Donec faucibus sit amet arcu at sollicitudin. Aenean facilisis sed ante eu placerat. Morbi sollicitudin velit nisl, posuere viverra turpis volutpat vel. Maecenas aliquet tellus et libero scelerisque suscipit. Nunc eleifend, ante vitae ornare elementum, mauris nulla porttitor lectus, ut mollis purus mi vitae nulla. In hac habitasse platea dictumst.', '#2#5#', '2021-02-27 00:00:00'),
+(2, 'Article 2', 'image2.jpg', 'Ut ut tortor ex. Pellentesque ultrices vel turpis et ultrices. Nunc venenatis nisl at posuere gravida. Curabitur ultrices dui turpis, non vehicula urna molestie quis. Donec vitae orci pulvinar, posuere ex sit amet, viverra purus. Phasellus a elit metus. Curabitur in molestie libero, quis facilisis mauris. Etiam viverra orci et ipsum pellentesque volutpat. Aliquam pretium turpis ac velit tempus, eu euismod lorem facilisis. Suspendisse ut venenatis lacus. In porta est lacinia dapibus faucibus. In mollis fermentum urna eu hendrerit.', '#1#', '2021-02-27 00:00:00'),
+(12, 'Article 3', 'image3.jpg', 'Donec tincidunt finibus est eget eleifend. Duis condimentum non augue id iaculis. Integer quis tempor leo. Sed viverra gravida eros vitae imperdiet. Duis semper, sapien ut porta gravida, libero metus cursus neque, vel aliquet ante ex vel libero. Praesent lectus felis, pulvinar in sagittis a, aliquet sed augue. Duis vel diam fringilla neque dictum bibendum nec at magna. Pellentesque vehicula tellus eu condimentum gravida. Nullam pulvinar vel sapien sit amet pretium. Quisque quis neque a risus accumsan mattis. Nulla fermentum justo vitae ullamcorper cursus. Cras tincidunt mi non rutrum congue. Curabitur porttitor ipsum ligula, sed porta nunc ultricies quis. Quisque augue dolor, faucibus vitae gravida ac, porttitor iaculis orci. ', '#1#', '2021-02-27 00:00:00'),
+(17, 'Article 4', 'image4.jpg', 'Ut ut tortor ex. Pellentesque ultrices vel turpis et ultrices. Nunc venenatis nisl at posuere gravida. Curabitur ultrices dui turpis, non vehicula urna molestie quis. Donec vitae orci pulvinar, posuere ex sit amet, viverra purus. Phasellus a elit metus. Curabitur in molestie libero, quis facilisis mauris. Etiam viverra orci et ipsum pellentesque volutpat. Aliquam pretium turpis ac velit tempus, eu euismod lorem facilisis. Suspendisse ut venenatis lacus. In porta est lacinia dapibus faucibus. In mollis fermentum urna eu hendrerit.', '#1#', '2021-02-27 00:00:00'),
+(18, 'Article 5', 'default.png', 'Donec tincidunt finibus est eget eleifend. Duis condimentum non augue id iaculis. Integer quis tempor leo. Sed viverra gravida eros vitae imperdiet. Duis semper, sapien ut porta gravida, libero metus cursus neque, vel aliquet ante ex vel libero. Praesent lectus felis, pulvinar in sagittis a, aliquet sed augue. Duis vel diam fringilla neque dictum bibendum nec at magna. Pellentesque vehicula tellus eu condimentum gravida. Nullam pulvinar vel sapien sit amet pretium. Quisque quis neque a risus accumsan mattis. Nulla fermentum justo vitae ullamcorper cursus. Cras tincidunt mi non rutrum congue. Curabitur porttitor ipsum ligula, sed porta nunc ultricies quis. Quisque augue dolor, faucibus vitae gravida ac, porttitor iaculis orci. ', '#1#', '2021-02-27 00:00:00'),
+(19, 'Article 6', 'default.png', '    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lectus justo, id imperdiet neque ultrices eu. Phasellus imperdiet odio non dolor tempor lacinia. Donec faucibus sit amet arcu at sollicitudin. Aenean facilisis sed ante eu placerat. Morbi sollicitudin velit nisl, posuere viverra turpis volutpat vel. Maecenas aliquet tellus et libero scelerisque suscipit. Nunc eleifend, ante vitae ornare elementum, mauris nulla porttitor lectus, ut mollis purus mi vitae nulla. In hac habitasse platea dictumst.', '#4#7#', '2021-02-27 00:00:00'),
+(20, 'Reprise des cours', 'classroom.jpg', 'La reprise des cours est prévu pour le dimanche 20 septembre 2020. Morbi eu neque vitae nisl vehicula congue. Aliquam a ultricies dui. Nunc malesuada consectetur consequat. In varius metus a malesuada fermentum. Suspendisse vel mattis nulla, rhoncus iaculis turpis. Nullam orci ex, imperdiet quis sodales a, egestas blandit arcu. Etiam tincidunt euismod libero eget dapibus. Curabitur porta orci ut dolor eleifend, at blandit neque posuere. ', '#1#', '2021-02-27 20:00:00'),
+(21, 'Mesures sanitaires', 'class1.webp', 'Maecenas porttitor felis nec nisl volutpat, ut efficitur ante efficitur. Praesent ultricies sodales interdum. Vestibulum eget lectus vitae lectus tristique dignissim. Sed eu fermentum ipsum. Aenean vel enim risus. Pellentesque varius nec mauris ac tincidunt. Nullam dictum, lacus cursus pulvinar congue, dui lacus rutrum lacus, vitae dapibus enim risus a lectus. Mauris eget tristique ex. ', '#1#', '2021-02-27 00:00:00'),
+(22, 'Article 9', 'school1.png', 'Fusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. ', '#1#', '2021-02-27 00:00:00'),
+(23, 'Concernant les parents', '', 'Fusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. \r\n\r\nFusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. ', '#6#', '2021-02-27 23:07:31');
 
 -- --------------------------------------------------------
 
@@ -113,18 +119,19 @@ INSERT INTO `Cycle` (`id`, `name`) VALUES
 CREATE TABLE `Paragraph` (
   `id` int(8) NOT NULL,
   `p_index` int(8) NOT NULL,
-  `content` text NOT NULL
+  `content` text NOT NULL,
+  `image` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `Paragraph`
 --
 
-INSERT INTO `Paragraph` (`id`, `p_index`, `content`) VALUES
-(1, 1, 'Praesent vel consequat turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus blandit diam sit amet dignissim. Proin sed tellus eu enim placerat pharetra. Sed quam dolor, imperdiet euismod porttitor a, tempus in risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque non nulla purus. Nam nec metus nibh. Fusce ante magna, sodales eu odio quis, fringilla tempor dolor. Nulla facilisi. Vestibulum dui dui, interdum sit amet condimentum sed, mattis sit amet nulla. Donec auctor quam eu dignissim bibendum. Sed id pretium erat. Duis sit amet velit tincidunt, porttitor dui a, mattis felis. '),
-(2, 2, 'Ut luctus, sem in tempor ornare, dolor massa lobortis mauris, eu consectetur dui tellus sit amet diam. Vestibulum vel tincidunt mi, id molestie orci. Nulla ullamcorper turpis fermentum posuere ullamcorper. Suspendisse sit amet pharetra nunc, et vehicula nibh. Curabitur eu dui sollicitudin, facilisis erat sed, facilisis ipsum. Nam porttitor mauris diam, ac imperdiet justo hendrerit eu. Sed ut augue ullamcorper, accumsan sapien mattis, ullamcorper orci. Maecenas vulputate facilisis mauris quis cursus. Sed ullamcorper volutpat sodales. In pellentesque eleifend orci eu elementum. '),
-(3, 3, 'Praesent vel consequat turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus blandit diam sit amet dignissim. Proin sed tellus eu enim placerat pharetra. Sed quam dolor, imperdiet euismod porttitor a, tempus in risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque non nulla purus. Nam nec metus nibh. Fusce ante magna, sodales eu odio quis, fringilla tempor dolor. Nulla facilisi. Vestibulum dui dui, interdum sit amet condimentum sed, mattis sit amet nulla. Donec auctor quam eu dignissim bibendum. Sed id pretium erat. Duis sit amet velit tincidunt, porttitor dui a, mattis felis. '),
-(6, 5, '     Cras eget dui dapibus, faucibus mi sit amet, iaculis ipsum. Ut ultrices quam quis purus viverra, vel blandit metus vehicula. Quisque faucibus lectus non mauris ullamcorper, sit amet elementum ante fermentum. Pellentesque id quam tortor. Sed tempus, ante sed vehicula ultricies, dolor dui imperdiet lectus, eu faucibus turpis lorem ut orci. Proin vestibulum id ligula ut aliquam. Aliquam malesuada tellus ligula, nec luctus sem tincidunt sit amet. Ut convallis tellus erat, condimentum congue tortor mattis sed. Suspendisse ut volutpat ante. Fusce in dui in libero tincidunt accumsan. Aliquam luctus ac lorem eget congue. Etiam tristique et enim in pulvinar. In blandit, mi in consequat congue, ante neque elementum arcu, ac sodales sem lectus vel est. In id augue quam. Vestibulum dapibus tortor ac quam laoreet fringilla. Morbi odio elit, accumsan ac nunc ac, tristique sollicitudin purus. ');
+INSERT INTO `Paragraph` (`id`, `p_index`, `content`, `image`) VALUES
+(1, 1, 'Praesent vel consequat turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus blandit diam sit amet dignissim. Proin sed tellus eu enim placerat pharetra. Sed quam dolor, imperdiet euismod porttitor a, tempus in risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque non nulla purus. Nam nec metus nibh. Fusce ante magna, sodales eu odio quis, fringilla tempor dolor. Nulla facilisi. Vestibulum dui dui, interdum sit amet condimentum sed, mattis sit amet nulla. Donec auctor quam eu dignissim bibendum. Sed id pretium erat. Duis sit amet velit tincidunt, porttitor dui a, mattis felis. ', 'classroom.jpg'),
+(2, 2, 'Ut luctus, sem in tempor ornare, dolor massa lobortis mauris, eu consectetur dui tellus sit amet diam. Vestibulum vel tincidunt mi, id molestie orci. Nulla ullamcorper turpis fermentum posuere ullamcorper. Suspendisse sit amet pharetra nunc, et vehicula nibh. Curabitur eu dui sollicitudin, facilisis erat sed, facilisis ipsum. Nam porttitor mauris diam, ac imperdiet justo hendrerit eu. Sed ut augue ullamcorper, accumsan sapien mattis, ullamcorper orci. Maecenas vulputate facilisis mauris quis cursus. Sed ullamcorper volutpat sodales. In pellentesque eleifend orci eu elementum. ', NULL),
+(3, 3, 'Praesent vel consequat turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus blandit diam sit amet dignissim. Proin sed tellus eu enim placerat pharetra. Sed quam dolor, imperdiet euismod porttitor a, tempus in risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque non nulla purus. Nam nec metus nibh. Fusce ante magna, sodales eu odio quis, fringilla tempor dolor. Nulla facilisi. Vestibulum dui dui, interdum sit amet condimentum sed, mattis sit amet nulla. Donec auctor quam eu dignissim bibendum. Sed id pretium erat. Duis sit amet velit tincidunt, porttitor dui a, mattis felis. ', NULL),
+(6, 5, '     Cras eget dui dapibus, faucibus mi sit amet, iaculis ipsum. Ut ultrices quam quis purus viverra, vel blandit metus vehicula. Quisque faucibus lectus non mauris ullamcorper, sit amet elementum ante fermentum. Pellentesque id quam tortor. Sed tempus, ante sed vehicula ultricies, dolor dui imperdiet lectus, eu faucibus turpis lorem ut orci. Proin vestibulum id ligula ut aliquam. Aliquam malesuada tellus ligula, nec luctus sem tincidunt sit amet. Ut convallis tellus erat, condimentum congue tortor mattis sed. Suspendisse ut volutpat ante. Fusce in dui in libero tincidunt accumsan. Aliquam luctus ac lorem eget congue. Etiam tristique et enim in pulvinar. In blandit, mi in consequat congue, ante neque elementum arcu, ac sodales sem lectus vel est. In id augue quam. Vestibulum dapibus tortor ac quam laoreet fringilla. Morbi odio elit, accumsan ac nunc ac, tristique sollicitudin purus. ', NULL);
 
 -- --------------------------------------------------------
 
@@ -274,6 +281,30 @@ INSERT INTO `Subject` (`id`, `name`, `year`, `coeff`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Tag`
+--
+
+CREATE TABLE `Tag` (
+  `id` int(16) NOT NULL,
+  `name` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Tag`
+--
+
+INSERT INTO `Tag` (`id`, `name`) VALUES
+(1, 'Tous'),
+(2, 'Primaire'),
+(3, 'Secondaire'),
+(4, 'Lycéé'),
+(5, 'Pour élèves'),
+(6, 'Pour parents'),
+(7, 'Pour enseignants');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Teacher`
 --
 
@@ -386,6 +417,12 @@ ALTER TABLE `Subject`
   ADD KEY `subject_year` (`year`);
 
 --
+-- Indexes for table `Tag`
+--
+ALTER TABLE `Tag`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `Teacher`
 --
 ALTER TABLE `Teacher`
@@ -405,7 +442,7 @@ ALTER TABLE `Tutor`
 -- AUTO_INCREMENT for table `Article`
 --
 ALTER TABLE `Article`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `Classroom`
@@ -448,6 +485,12 @@ ALTER TABLE `SchoolYear`
 --
 ALTER TABLE `Subject`
   MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `Tag`
+--
+ALTER TABLE `Tag`
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
