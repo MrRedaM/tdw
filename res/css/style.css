@@ -17,6 +17,15 @@ body {
     text-align: center;
 }
 
+h1{
+    font-family: 'Montserrat-ExtraBold';
+}
+
+a{
+    text-decoration: none;
+    color: dodgerblue;
+}
+
 /* HEADER ==================================================== */
 
 header {
@@ -126,8 +135,8 @@ footer{
     border-top: dodgerblue solid 2px;
 }
 
-footer h3{
-    font-family: 'Monserrat-SemiBold', Arial, Helvetica, sans-serif;
+footer p{
+    font-family: 'Montserrat-Light', Arial, Helvetica, sans-serif;
 }
 
 footer *{

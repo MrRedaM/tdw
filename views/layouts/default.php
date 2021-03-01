@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/tdw/res/css/presentation.css">
     <link rel="stylesheet" href="/tdw/res/css/schedule.css">
     <link rel="stylesheet" href="/tdw/res/css/filter.css">
+    <link rel="stylesheet" href="/tdw/res/css/teachers.css">
     
 </head>
 
@@ -63,6 +64,6 @@
     </main>
 
     <footer>
-        <h3>Copyright ©  2020-2021 MySchool. All rights reserved.</h3>
+        <p>Copyright ©  2020-2021 MySchool. All rights reserved.</p>
     </footer>
 </body>

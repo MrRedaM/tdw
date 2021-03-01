@@ -2,8 +2,6 @@
 
 class SubjectModel extends Model{
 
-    private $subjectTable = 'Subject';
-
     public function __construct(){
         $this->getConnection();
         $this->table = $this->subjectTable;
@@ -26,4 +24,5 @@ class SubjectModel extends Model{
         WHERE id = ".$id;
         return $this->request($sql);
     }
+
 }

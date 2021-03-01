@@ -2,12 +2,6 @@
 
 class AccountModel extends Model{
 
-    private $personTable = 'Person';
-    private $adminTable = 'Admin';
-    private $teacherTable = 'Teacher';
-    private $studentTable = 'Student';
-    private $tutorTable = 'Tutor';
-
     public function __construct(){
         $this->getConnection();
         $this->table = $this->personTable;

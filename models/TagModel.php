@@ -2,8 +2,6 @@
 
 class TagModel extends Model{
 
-    private $tagTable = 'Tag';
-
     public function __construct(){
         $this->getConnection();
         $this->table = $this->tagTable;

@@ -16,7 +16,7 @@
 
         <?php foreach($classrooms as $classroom): ?>
             <h2><?= $classroom['name'] ?></h2>
-        <?php endforeach; ?> 
+        
 
         <div class="timetable">                
             <table>
@@ -34,8 +34,10 @@
                         <?php foreach($programs as $program): ?>
                             <?php if($program['classroom'] == $classroom['id'] and $program['day'] == $day): ?>
                                 <td> 
+                                    
                                     <?php foreach($subjects as $subject): ?>
                                             <?php if($subject['id'] == $program['subject']): ?>
+                                                <p style="background-color: <?= $subject['color'] ?>; color: <?= ColorUtils::getTextColor($subject['color']) ?>;">
                                                 <?= $subject['name'] ?>
                                                 <?php break; ?>
                                             <?php endif; ?>
@@ -47,7 +49,8 @@
                                             <?php break; ?>
                                         <?php endif; ?>
                                     <?php endforeach; ?><br>
-                                    (<?= $program['start'] ?> - <?= $program['end'] ?>)                     
+                                    (<?= $program['start'] ?> - <?= $program['end'] ?>)     
+                                    </p>                
                                 </td>
                             <?php endif; ?>      
                         <?php endforeach; ?> 
@@ -55,7 +58,7 @@
                 <?php endfor;?>
             </table>
         </div>
-        
+        <?php endforeach; ?> 
     </div>
 </div>
 

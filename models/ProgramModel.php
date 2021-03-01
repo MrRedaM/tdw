@@ -2,10 +2,6 @@
 
 class ProgramModel extends Model{
 
-    private $programTable = 'Program';
-    private $classroomTable = 'Classroom';
-    private $yearTable = 'SchoolYear';
-
     public function __construct(){
         $this->getConnection();
         $this->table = $this->programTable;

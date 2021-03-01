@@ -2,8 +2,6 @@
 
 class ArticleModel extends Model{
 
-    private $articleTable = 'Article';
-
     public function __construct(){
         $this->getConnection();
         $this->table = $this->articleTable;

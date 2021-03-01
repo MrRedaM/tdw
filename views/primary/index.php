@@ -8,17 +8,17 @@
         <div class="article_text">
             <h3><a href="<?= PRE ?>/schedule/cycle/1">Emplois du temps</a></h3>
             <p>Consulter tous les horaires d'études des élèves du primaire</p>
-            <a href="<?= PRE ?>/schedule/cycle/1"">Voir les horaires →</a>
+            <a href="<?= PRE ?>/schedule/cycle/1">Voir les horaires →</a>
         </div>
     </div>
     <div class="article">
         <div class="article_image">
-            <a href="<?= PRE ?>/schedule/cycle/0"><img src="<?= PRE ?>/res/images/teacher.png" onerror="this.src='/tdw/res/images/default.png';"></a>
+            <a href="<?= PRE ?>/teachers/cycle/1"><img src="<?= PRE ?>/res/images/teacher.png" onerror="this.src='/tdw/res/images/default.png';"></a>
         </div>
         <div class="article_text">
-            <h3><a href="<?= PRE ?>/schedule/cycle/0">Enseignants</a></h3>
+            <h3><a href="<?= PRE ?>/teachers/cycle/1">Enseignants</a></h3>
             <p>Liste des enseignants du primaire et leurs heures de reception</p>
-            <a href="<?= PRE ?>/schedule/cycle/0"">Voir les enseignants →</a>
+            <a href="<?= PRE ?>/teachers/cycle/1">Voir les enseignants →</a>
         </div>
     </div>
     <div class="article">

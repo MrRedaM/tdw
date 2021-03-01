@@ -1,0 +1,48 @@
+.teachers{
+    background-color: white;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.teacher_list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.teachers h1{
+    text-align: center;
+    padding: 0 1em 1em 1em;
+}
+
+.teachers .teacher{
+    display: flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    background-color: #fafafa;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.teachers a{
+    margin: auto 0;
+    padding: 0 1em 0 1em;
+    font-family: 'Montserrat-Medium';
+}
+
+.teacher p{
+    background-color: dodgerblue;
+    color: white;
+    margin: auto 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+
+}
+
+.teachers img{
+    width: 50px;
+    height: 50px;
+    border-radius: 1em;
+}

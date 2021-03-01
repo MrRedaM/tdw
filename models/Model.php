@@ -6,6 +6,22 @@ abstract class Model {
     private $username = "root";
     private $password = "";
 
+    protected $personTable = 'Person';
+    protected $adminTable = 'Admin';
+    protected $teacherTable = 'Teacher';
+    protected $studentTable = 'Student';
+    protected $tutorTable = 'Tutor';
+    protected $programTable = 'Program';
+    protected $classroomTable = 'Classroom';
+    protected $yearTable = 'SchoolYear';
+    protected $cycleTable = 'Cycle';
+    protected $articleTable = 'Article';
+    protected $paragraphTable = 'Paragraph';
+    protected $subjectTable = 'Subject';
+    protected $tagTable = 'Tag';
+    protected $receptionTable = 'Reception';
+    protected $stringTable = 'String';
+
     protected $_connexion;
 
     public $table;

@@ -13,12 +13,12 @@
     </div>
     <div class="article">
         <div class="article_image">
-            <a href="<?= PRE ?>/schedule/cycle/0"><img src="<?= PRE ?>/res/images/teacher.png" onerror="this.src='/tdw/res/images/default.png';"></a>
+            <a href="<?= PRE ?>/teachers/cycle/2"><img src="<?= PRE ?>/res/images/teacher.png" onerror="this.src='/tdw/res/images/default.png';"></a>
         </div>
         <div class="article_text">
-            <h3><a href="<?= PRE ?>/schedule/cycle/0">Enseignants</a></h3>
+            <h3><a href="<?= PRE ?>/teachers/cycle/2">Enseignants</a></h3>
             <p>Liste des enseignants du secondaire et leurs heures de reception</p>
-            <a href="<?= PRE ?>/schedule/cycle/0"">Voir les enseignants →</a>
+            <a href="<?= PRE ?>/teachers/cycle/2"">Voir les enseignants →</a>
         </div>
     </div>
     <div class="article">

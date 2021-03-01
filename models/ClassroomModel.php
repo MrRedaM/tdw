@@ -2,9 +2,6 @@
 
 class ClassroomModel extends Model{
 
-    private $classroomTable = 'Classroom';
-    private $yearTable = 'SchoolYear';
-
     public function __construct(){
         $this->getConnection();
         $this->table = $this->classroomTable;

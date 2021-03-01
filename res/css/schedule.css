@@ -7,13 +7,13 @@
 
 .schedules h1{
     font-family: 'Montserrat-ExtraBold';
-    padding: 0 1em 2em 1em;
+    padding: 0 1em 1em 1em;
     text-align: center;
 }
 
 .schedules h2{
     font-family: 'Montserrat-SemiBold';
-    padding: 0 1em 1em 0;
+    padding: 1em 1em 1em 0;
 }
 
 .timetable{
@@ -43,9 +43,15 @@
 }
 
 .timetable td{
+    padding: 0 1em 0 1em;
     border-width: 0;
     border-color: black;
     border-style: solid;
     text-align: center;
-    font-family: 'Montserrat-Light';
+    font-family: 'Montserrat-Medium';
+}
+
+.timetable td p{
+    border-radius: 1em;
+    padding: 1em;
 }

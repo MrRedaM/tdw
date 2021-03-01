@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 28, 2021 at 01:38 AM
+-- Generation Time: Mar 02, 2021 at 12:44 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -61,8 +61,8 @@ INSERT INTO `Article` (`id`, `title`, `image`, `description`, `tags`, `created`)
 (1, 'Article 1', 'image1.jpg', '    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lectus justo, id imperdiet neque ultrices eu. Phasellus imperdiet odio non dolor tempor lacinia. Donec faucibus sit amet arcu at sollicitudin. Aenean facilisis sed ante eu placerat. Morbi sollicitudin velit nisl, posuere viverra turpis volutpat vel. Maecenas aliquet tellus et libero scelerisque suscipit. Nunc eleifend, ante vitae ornare elementum, mauris nulla porttitor lectus, ut mollis purus mi vitae nulla. In hac habitasse platea dictumst.', '#2#5#', '2021-02-27 00:00:00'),
 (2, 'Article 2', 'image2.jpg', 'Ut ut tortor ex. Pellentesque ultrices vel turpis et ultrices. Nunc venenatis nisl at posuere gravida. Curabitur ultrices dui turpis, non vehicula urna molestie quis. Donec vitae orci pulvinar, posuere ex sit amet, viverra purus. Phasellus a elit metus. Curabitur in molestie libero, quis facilisis mauris. Etiam viverra orci et ipsum pellentesque volutpat. Aliquam pretium turpis ac velit tempus, eu euismod lorem facilisis. Suspendisse ut venenatis lacus. In porta est lacinia dapibus faucibus. In mollis fermentum urna eu hendrerit.', '#1#', '2021-02-27 00:00:00'),
 (12, 'Article 3', 'image3.jpg', 'Donec tincidunt finibus est eget eleifend. Duis condimentum non augue id iaculis. Integer quis tempor leo. Sed viverra gravida eros vitae imperdiet. Duis semper, sapien ut porta gravida, libero metus cursus neque, vel aliquet ante ex vel libero. Praesent lectus felis, pulvinar in sagittis a, aliquet sed augue. Duis vel diam fringilla neque dictum bibendum nec at magna. Pellentesque vehicula tellus eu condimentum gravida. Nullam pulvinar vel sapien sit amet pretium. Quisque quis neque a risus accumsan mattis. Nulla fermentum justo vitae ullamcorper cursus. Cras tincidunt mi non rutrum congue. Curabitur porttitor ipsum ligula, sed porta nunc ultricies quis. Quisque augue dolor, faucibus vitae gravida ac, porttitor iaculis orci. ', '#1#', '2021-02-27 00:00:00'),
-(17, 'Article 4', 'image4.jpg', 'Ut ut tortor ex. Pellentesque ultrices vel turpis et ultrices. Nunc venenatis nisl at posuere gravida. Curabitur ultrices dui turpis, non vehicula urna molestie quis. Donec vitae orci pulvinar, posuere ex sit amet, viverra purus. Phasellus a elit metus. Curabitur in molestie libero, quis facilisis mauris. Etiam viverra orci et ipsum pellentesque volutpat. Aliquam pretium turpis ac velit tempus, eu euismod lorem facilisis. Suspendisse ut venenatis lacus. In porta est lacinia dapibus faucibus. In mollis fermentum urna eu hendrerit.', '#1#', '2021-02-27 00:00:00'),
-(18, 'Article 5', 'default.png', 'Donec tincidunt finibus est eget eleifend. Duis condimentum non augue id iaculis. Integer quis tempor leo. Sed viverra gravida eros vitae imperdiet. Duis semper, sapien ut porta gravida, libero metus cursus neque, vel aliquet ante ex vel libero. Praesent lectus felis, pulvinar in sagittis a, aliquet sed augue. Duis vel diam fringilla neque dictum bibendum nec at magna. Pellentesque vehicula tellus eu condimentum gravida. Nullam pulvinar vel sapien sit amet pretium. Quisque quis neque a risus accumsan mattis. Nulla fermentum justo vitae ullamcorper cursus. Cras tincidunt mi non rutrum congue. Curabitur porttitor ipsum ligula, sed porta nunc ultricies quis. Quisque augue dolor, faucibus vitae gravida ac, porttitor iaculis orci. ', '#1#', '2021-02-27 00:00:00'),
+(17, 'Article 4', 'image4.jpg', '    Ut ut tortor ex. Pellentesque ultrices vel turpis et ultrices. Nunc venenatis nisl at posuere gravida. Curabitur ultrices dui turpis, non vehicula urna molestie quis. Donec vitae orci pulvinar, posuere ex sit amet, viverra purus. Phasellus a elit metus. Curabitur in molestie libero, quis facilisis mauris. Etiam viverra orci et ipsum pellentesque volutpat. Aliquam pretium turpis ac velit tempus, eu euismod lorem facilisis. Suspendisse ut venenatis lacus. In porta est lacinia dapibus faucibus. In mollis fermentum urna eu hendrerit.', '#3#', '2021-02-27 00:00:00'),
+(18, 'Article 5', 'default.png', '    Donec tincidunt finibus est eget eleifend. Duis condimentum non augue id iaculis. Integer quis tempor leo. Sed viverra gravida eros vitae imperdiet. Duis semper, sapien ut porta gravida, libero metus cursus neque, vel aliquet ante ex vel libero. Praesent lectus felis, pulvinar in sagittis a, aliquet sed augue. Duis vel diam fringilla neque dictum bibendum nec at magna. Pellentesque vehicula tellus eu condimentum gravida. Nullam pulvinar vel sapien sit amet pretium. Quisque quis neque a risus accumsan mattis. Nulla fermentum justo vitae ullamcorper cursus. Cras tincidunt mi non rutrum congue. Curabitur porttitor ipsum ligula, sed porta nunc ultricies quis. Quisque augue dolor, faucibus vitae gravida ac, porttitor iaculis orci. ', '#2#', '2021-02-27 00:00:00'),
 (19, 'Article 6', 'default.png', '    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lectus justo, id imperdiet neque ultrices eu. Phasellus imperdiet odio non dolor tempor lacinia. Donec faucibus sit amet arcu at sollicitudin. Aenean facilisis sed ante eu placerat. Morbi sollicitudin velit nisl, posuere viverra turpis volutpat vel. Maecenas aliquet tellus et libero scelerisque suscipit. Nunc eleifend, ante vitae ornare elementum, mauris nulla porttitor lectus, ut mollis purus mi vitae nulla. In hac habitasse platea dictumst.', '#4#7#', '2021-02-27 00:00:00'),
 (20, 'Reprise des cours', 'classroom.jpg', 'La reprise des cours est prévu pour le dimanche 20 septembre 2020. Morbi eu neque vitae nisl vehicula congue. Aliquam a ultricies dui. Nunc malesuada consectetur consequat. In varius metus a malesuada fermentum. Suspendisse vel mattis nulla, rhoncus iaculis turpis. Nullam orci ex, imperdiet quis sodales a, egestas blandit arcu. Etiam tincidunt euismod libero eget dapibus. Curabitur porta orci ut dolor eleifend, at blandit neque posuere. ', '#1#', '2021-02-27 20:00:00'),
 (21, 'Mesures sanitaires', 'class1.webp', 'Maecenas porttitor felis nec nisl volutpat, ut efficitur ante efficitur. Praesent ultricies sodales interdum. Vestibulum eget lectus vitae lectus tristique dignissim. Sed eu fermentum ipsum. Aenean vel enim risus. Pellentesque varius nec mauris ac tincidunt. Nullam dictum, lacus cursus pulvinar congue, dui lacus rutrum lacus, vitae dapibus enim risus a lectus. Mauris eget tristique ex. ', '#1#', '2021-02-27 00:00:00'),
@@ -158,7 +158,7 @@ CREATE TABLE `Person` (
 INSERT INTO `Person` (`id`, `last_name`, `first_name`, `address`, `phone1`, `phone2`, `phone3`, `mail`, `passwd_hash`) VALUES
 (1, 'admin', 'admin', 'adresse', '0000000000', '0000000000', '0000000000', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
 (2, 'Prof1', 'Ahmed', 'Alger', '0545346245', 'N/A', 'N/A', 'simoh@esi.dz', ''),
-(3, 'Prof2', 'Ali', 'Alger', '0737827743', 'N/A', 'N/A', 'smahat@esi.dz', ''),
+(3, 'Prof2', 'Mohamed', 'Alger', '0737827743', 'N/A', 'N/A', 'smahat@esi.dz', ''),
 (4, 'Etudiant1', 'Reda', 'Alger', '0553492859', '0555493853', 'N/A', 'morsli@esi.dz', ''),
 (5, 'Etudiant2', 'Ilyes', 'Tizi', '0539483722', 'N/A', 'N/A', 'bacha@esi.dz', ''),
 (6, 'Parent1', 'Hamid', 'home', '0539847384', 'N/A', 'N/A', 'hamid@gmail.com', ''),
@@ -192,6 +192,27 @@ INSERT INTO `Program` (`id`, `teacher`, `classroom`, `subject`, `day`, `start`, 
 (5, 2, 2, 3, 3, '08:00:00', '10:00:00'),
 (6, 3, 2, 6, 5, '13:00:00', '15:00:00'),
 (7, 2, 3, 3, 2, '08:00:00', '12:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Reception`
+--
+
+CREATE TABLE `Reception` (
+  `id` int(16) NOT NULL,
+  `teacher` int(16) NOT NULL,
+  `day` int(1) NOT NULL,
+  `start` time NOT NULL,
+  `end` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Reception`
+--
+
+INSERT INTO `Reception` (`id`, `teacher`, `day`, `start`, `end`) VALUES
+(1, 2, 3, '14:00:00', '16:00:00');
 
 -- --------------------------------------------------------
 
@@ -263,20 +284,21 @@ CREATE TABLE `Subject` (
   `id` int(16) NOT NULL,
   `name` varchar(16) NOT NULL,
   `year` int(16) NOT NULL,
-  `coeff` int(2) NOT NULL DEFAULT 1
+  `coeff` int(2) NOT NULL DEFAULT 1,
+  `color` varchar(10) NOT NULL DEFAULT '#ffffff'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `Subject`
 --
 
-INSERT INTO `Subject` (`id`, `name`, `year`, `coeff`) VALUES
-(1, 'Arabe', 1, 1),
-(2, 'Français', 1, 1),
-(3, 'Maths', 2, 1),
-(4, 'Physique', 2, 1),
-(5, 'Science', 3, 1),
-(6, 'Info', 3, 1);
+INSERT INTO `Subject` (`id`, `name`, `year`, `coeff`, `color`) VALUES
+(1, 'Arabe', 1, 1, '#ff0000'),
+(2, 'Français', 1, 1, '#0000ff'),
+(3, 'Maths', 2, 1, '#ffffff'),
+(4, 'Physique', 2, 1, '#ffffff'),
+(5, 'Science', 3, 1, '#ffffff'),
+(6, 'Info', 3, 1, '#ffffff');
 
 -- --------------------------------------------------------
 
@@ -389,6 +411,13 @@ ALTER TABLE `Program`
   ADD KEY `program_subject` (`subject`);
 
 --
+-- Indexes for table `Reception`
+--
+ALTER TABLE `Reception`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `reception_teacher` (`teacher`);
+
+--
 -- Indexes for table `SchoolYear`
 --
 ALTER TABLE `SchoolYear`
@@ -475,6 +504,12 @@ ALTER TABLE `Program`
   MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `Reception`
+--
+ALTER TABLE `Reception`
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `SchoolYear`
 --
 ALTER TABLE `SchoolYear`
@@ -515,6 +550,12 @@ ALTER TABLE `Program`
   ADD CONSTRAINT `program_classroom` FOREIGN KEY (`classroom`) REFERENCES `Classroom` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `program_subject` FOREIGN KEY (`subject`) REFERENCES `Subject` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `program_teacher` FOREIGN KEY (`teacher`) REFERENCES `Teacher` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Reception`
+--
+ALTER TABLE `Reception`
+  ADD CONSTRAINT `reception_teacher` FOREIGN KEY (`teacher`) REFERENCES `Teacher` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `SchoolYear`
