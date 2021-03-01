@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/tdw/res/css/style.css">
     <link rel="stylesheet" href="/tdw/res/css/articles.css">
     <link rel="stylesheet" href="/tdw/res/css/presentation.css">
+    <link rel="stylesheet" href="/tdw/res/css/schedule.css">
+    <link rel="stylesheet" href="/tdw/res/css/filter.css">
     
 </head>
 
@@ -25,9 +27,9 @@
                 <li><a href="<?= PRE ?>/presentation">Présentation</a></li>
                 <li><a href="">Cycles</a>
                     <ul>
-                        <li><a href="">Primaire</a></li>
-                        <li><a href="">Moyen</a></li>
-                        <li><a href="">Lycéé</a></li>
+                        <li><a href="<?= PRE ?>/primary">Primaire</a></li>
+                        <li><a href="<?= PRE ?>/secondary">Moyen</a></li>
+                        <li><a href="<?= PRE ?>/highschool">Lycéé</a></li>
                     </ul>
                 </li>
                 <li><a href="">Espace élève</a></li>

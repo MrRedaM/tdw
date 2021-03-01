@@ -1,0 +1,18 @@
+.filterable_page{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1em;
+}
+
+.filters{
+    background-color: white;
+    margin: 1em 0 1em 1em;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.filters h1{
+    font-family: 'Montserrat-ExtraBold';
+    padding: 0 1em 2em 1em;
+    text-align: center;
+}

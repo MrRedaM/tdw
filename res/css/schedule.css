@@ -1,0 +1,51 @@
+.schedules{
+    background-color: white;
+    margin: 1em 0 1em 1em;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.schedules h1{
+    font-family: 'Montserrat-ExtraBold';
+    padding: 0 1em 2em 1em;
+    text-align: center;
+}
+
+.schedules h2{
+    font-family: 'Montserrat-SemiBold';
+    padding: 0 1em 1em 0;
+}
+
+.timetable{
+    border: black solid 2px;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.timetable table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.timetable tr{
+    border-bottom: black solid 1px;
+    height: 100px;
+}
+
+.timetable tr:last-child{
+    border-bottom: none;
+}
+
+.timetable th{
+    border-right: black solid 1px;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.timetable td{
+    border-width: 0;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    font-family: 'Montserrat-Light';
+}

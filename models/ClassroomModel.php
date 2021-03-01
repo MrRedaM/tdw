@@ -3,6 +3,7 @@
 class ClassroomModel extends Model{
 
     private $classroomTable = 'Classroom';
+    private $yearTable = 'SchoolYear';
 
     public function __construct(){
         $this->getConnection();
@@ -25,5 +26,14 @@ class ClassroomModel extends Model{
         SET title = '".$title."', description = '".$desc."' 
         WHERE id = ".$id;
         return $this->request($sql);
+    }
+
+    public function findByCycle($id, string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->classroomTable." WHERE school_year IN 
+            (SELECT id FROM ".$this->yearTable." WHERE cycle = ".$id.")";
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->requestAll($sql);
     }
 }

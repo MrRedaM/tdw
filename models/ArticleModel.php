@@ -26,4 +26,12 @@ class ArticleModel extends Model{
         WHERE id = ".$id;
         return $this->request($sql);
     }
+
+    public function findByTag($id, string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->table." WHERE (tags LIKE '%#".$id."#%' OR tags LIKE '%#1#%')";
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->requestAll($sql);
+    }
 }

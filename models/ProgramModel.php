@@ -3,6 +3,8 @@
 class ProgramModel extends Model{
 
     private $programTable = 'Program';
+    private $classroomTable = 'Classroom';
+    private $yearTable = 'SchoolYear';
 
     public function __construct(){
         $this->getConnection();
@@ -29,6 +31,16 @@ class ProgramModel extends Model{
 
     public function findByTeacher($id, string $order = "", string $search = ""){
         $sql = "SELECT * FROM ".$this->table." WHERE teacher = ".$id;
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->requestAll($sql);
+    }
+
+    public function findByCycle($id, string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->table." WHERE classroom IN
+            (SELECT id FROM ".$this->classroomTable." WHERE school_year IN 
+            (SELECT id FROM ".$this->yearTable." WHERE cycle = ".$id."))";
         if($order != ""){
             $sql = $sql." ORDER BY ".$order;
         }
