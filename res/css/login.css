@@ -1,0 +1,68 @@
+.login{
+    background-color: white;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.login h2{
+    text-align: center;
+    padding: 0 1em 1em 1em;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.login form{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    gap: 1em;
+    width: min-content;
+}
+
+.login input{
+    font-family: 'Montserrat-Medium';
+}
+
+.login img{
+    width: 64px;
+    height: auto;
+    margin: auto;
+    opacity: 50%;
+}
+
+.login input[type="submit"]{
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.5em 2em 0.5em 2em;
+    border-radius: 2em;
+    border: none;
+    cursor: pointer;
+}
+
+.login p{
+    background-color: #ff000088;
+    margin-bottom: 1em;
+    padding: 0.2em;
+    text-align: center;
+    border-radius: 0.2em;
+    color: white;
+
+}
+
+.login_info{
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.2em 1em 0.2em 1em;
+    font-family: 'Montserrat-SemiBold';
+    border-bottom: dodgerblue solid 2px;
+    display: flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.login_info a{
+    color: white;
+    text-decoration: underline;
+}

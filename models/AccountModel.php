@@ -139,4 +139,11 @@ class AccountModel extends Model{
         return count($this->request($sql)) == 1;
     }
 
+    public function connectStudent($mail, $pass){
+        $sql = "SELECT * FROM ".$this->personTable." WHERE ( mail = '".$mail."' 
+            AND passwd_hash = '".md5($pass)."' AND id IN 
+            (SELECT id FROM ".$this->studentTable."))";
+        return $this->request($sql);
+    }
+
 }

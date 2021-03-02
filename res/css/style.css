@@ -41,8 +41,9 @@ header {
 
 
 .logo{
-    display: -ms-flexbox;
     display: flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
     display: -webkit-flex;
     margin: auto;
 }
@@ -58,8 +59,9 @@ header {
 }
 
 .social{
-    display: -ms-flexbox;
     display: flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
     display: -webkit-flex;
     justify-content: center;
     margin: auto;
@@ -72,10 +74,12 @@ header {
 } 
 
 .social a{
+    opacity: 0.6;
     transition: 0.3s;
 }
 
 .social a:hover{
+    opacity: 1;
     transform: translateY(3px);
     transition: 0.3s;
 }

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/tdw/res/css/filter.css">
     <link rel="stylesheet" href="/tdw/res/css/teachers.css">
     <link rel="stylesheet" href="/tdw/res/css/menu.css">
+    <link rel="stylesheet" href="/tdw/res/css/login.css">
     
 </head>
 
@@ -34,9 +35,9 @@
                         <li><a href="<?= PRE ?>/highschool">Lycéé</a></li>
                     </ul>
                 </li>
-                <li><a href="">Espace élève</a></li>
-                <li><a href="">Espace parent</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="<?= PRE ?>/student">Espace élève</a></li>
+                <li><a href="<?= PRE ?>/parent">Espace parent</a></li>
+                <li><a href="<?= PRE ?>/contact">Contact</a></li>
             </ul>
         </div>
         
