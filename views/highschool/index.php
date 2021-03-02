@@ -33,12 +33,12 @@
     </div>
     <div class="article">
         <div class="article_image">
-            <a href="<?= PRE ?>/schedule/cycle/0"><img src="<?= PRE ?>/res/images/fork.png" onerror="this.src='/tdw/res/images/default.png';"></a>
+            <a href="<?= PRE ?>/food"><img src="<?= PRE ?>/res/images/fork.png" onerror="this.src='/tdw/res/images/default.png';"></a>
         </div>
         <div class="article_text">
-            <h3><a href="<?= PRE ?>/schedule/cycle/0">Menu cantine</a></h3>
+            <h3><a href="<?= PRE ?>/food">Menu cantine</a></h3>
             <p>Consulter le menu hebdomadaire de la cantine</p>
-            <a href="<?= PRE ?>/schedule/cycle/0"">Consulter →</a>
+            <a href="<?= PRE ?>/food"">Consulter →</a>
         </div>
     </div>
 </div>

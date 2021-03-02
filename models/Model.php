@@ -20,6 +20,7 @@ abstract class Model {
     protected $subjectTable = 'Subject';
     protected $tagTable = 'Tag';
     protected $receptionTable = 'Reception';
+    protected $foodTable = 'Food';
     protected $stringTable = 'String';
 
     protected $_connexion;

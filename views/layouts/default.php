@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/tdw/res/css/schedule.css">
     <link rel="stylesheet" href="/tdw/res/css/filter.css">
     <link rel="stylesheet" href="/tdw/res/css/teachers.css">
+    <link rel="stylesheet" href="/tdw/res/css/menu.css">
     
 </head>
 

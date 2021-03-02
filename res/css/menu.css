@@ -1,0 +1,41 @@
+.menu{
+    background-color: white;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.menu table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+}
+
+.menu h1{
+    padding: 0 1em 1em 1em;
+    text-align: center;
+}
+
+.menu tr{
+    height: 64px;
+    border-bottom: black solid 1px;
+}
+
+.menu tr:last-child{
+    border-bottom: none;
+}
+
+.menu th{
+    width: 50%;
+    background-color: #fafafa;
+    text-align: center;
+    font-family: 'Montserrat-SemiBold';
+    border-right: black solid 1px;
+}
+
+.menu td{
+    padding: 1em;
+    margin: auto;
+    font-family: 'Montserrat-Medium';
+}

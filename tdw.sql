@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 02, 2021 at 12:44 AM
+-- Generation Time: Mar 02, 2021 at 02:55 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -109,6 +109,29 @@ INSERT INTO `Cycle` (`id`, `name`) VALUES
 (1, 'Primary'),
 (2, 'Secondary'),
 (3, 'High');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Food`
+--
+
+CREATE TABLE `Food` (
+  `id` int(16) NOT NULL,
+  `day` date NOT NULL DEFAULT current_timestamp(),
+  `menu` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Food`
+--
+
+INSERT INTO `Food` (`id`, `day`, `menu`) VALUES
+(1, '2021-02-28', 'Poulet frites'),
+(2, '2021-03-01', 'Soupe + Riz'),
+(3, '2021-03-02', 'Haricot + Viande'),
+(5, '2021-03-03', 'Pates + thon'),
+(6, '2021-03-04', 'Lantilles + patté');
 
 -- --------------------------------------------------------
 
@@ -293,12 +316,12 @@ CREATE TABLE `Subject` (
 --
 
 INSERT INTO `Subject` (`id`, `name`, `year`, `coeff`, `color`) VALUES
-(1, 'Arabe', 1, 1, '#ff0000'),
-(2, 'Français', 1, 1, '#0000ff'),
-(3, 'Maths', 2, 1, '#ffffff'),
+(1, 'Arabe', 1, 1, '#ff000088'),
+(2, 'Français', 1, 1, '#0000ff88'),
+(3, 'Maths', 2, 1, '#00ffff88'),
 (4, 'Physique', 2, 1, '#ffffff'),
 (5, 'Science', 3, 1, '#ffffff'),
-(6, 'Info', 3, 1, '#ffffff');
+(6, 'Info', 3, 1, '#000000ee');
 
 -- --------------------------------------------------------
 
@@ -387,6 +410,12 @@ ALTER TABLE `Classroom`
 -- Indexes for table `Cycle`
 --
 ALTER TABLE `Cycle`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `Food`
+--
+ALTER TABLE `Food`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -484,6 +513,12 @@ ALTER TABLE `Classroom`
 --
 ALTER TABLE `Cycle`
   MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `Food`
+--
+ALTER TABLE `Food`
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `Paragraph`
