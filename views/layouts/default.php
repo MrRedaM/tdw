@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/tdw/res/css/menu.css">
     <link rel="stylesheet" href="/tdw/res/css/login.css">
     <link rel="stylesheet" href="/tdw/res/css/account.css">
+    <link rel="stylesheet" href="/tdw/res/css/marks.css">
+    <link rel="stylesheet" href="/tdw/res/css/activities.css">
     
 </head>
 

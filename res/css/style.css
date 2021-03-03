@@ -19,6 +19,8 @@ body {
 
 h1{
     font-family: 'Montserrat-ExtraBold';
+    text-align: center;
+    padding: 1em;
 }
 
 a{
@@ -77,6 +79,7 @@ header {
 
 .logo h1{
     font-family: 'Lobster', 'Lucida Sans', sans-serif;
+    padding: 0;
 }
 
 .social{

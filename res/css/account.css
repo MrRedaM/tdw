@@ -12,4 +12,5 @@
 
 .info p:nth-child(2n){
     font-family: 'Montserrat-Medium';
+    text-align: right;
 }

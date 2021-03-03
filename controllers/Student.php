@@ -8,9 +8,9 @@ class Student extends Controller{
         $this->loadModel('ArticleModel');
         $this->loadModel('TagModel');
         $this->loadModel('ClassroomModel');
-        if(!isset($_SESSION['person_type']) or $_SESSION['person_type'] != 'student'){
-            $this->index();
-        }
+        $this->loadModel('MarkModel');
+        $this->loadModel('SubjectModel');
+        $this->loadModel('ActivityModel');
     }
 
     public function index($page = 1){
@@ -48,9 +48,34 @@ class Student extends Controller{
     }
 
     public function info(){
+        if(!isset($_SESSION['person_type']) or $_SESSION['person_type'] != 'student'){
+            $this->index();
+            return;
+        }
         $classroom = $this->ClassroomModel->findById($_SESSION['person']['classroom']);
         $year = $this->ClassroomModel->getYearFromClassroom($_SESSION['person']['classroom']);
         $cycle = $this->ClassroomModel->getCycleFromClassroom($_SESSION['person']['classroom']);
         $this->render('info', compact('classroom', 'year', 'cycle'));
+    }
+
+    public function marks(){
+        if(!isset($_SESSION['person_type']) or $_SESSION['person_type'] != 'student'){
+            $this->index();
+            return;
+        }
+        $marks = $this->MarkModel->findByStudent($_SESSION['person']['id']);
+        $subjects = $this->SubjectModel->findByClassroom($_SESSION['person']['classroom']);
+        $year = $this->ClassroomModel->getYearFromClassroom($_SESSION['person']['classroom']);
+        $cycle = $this->ClassroomModel->getCycleFromClassroom($_SESSION['person']['classroom']);
+        $this->render('marks', compact('marks', 'subjects', 'cycle', 'year'));
+    }
+
+    public function activities(){
+        if(!isset($_SESSION['person_type']) or $_SESSION['person_type'] != 'student'){
+            $this->index();
+            return;
+        }
+        $activities = $this->ActivityModel->findByStudent($_SESSION['person']['id']);
+        $this->render('activities', compact('activities'));
     }
 }

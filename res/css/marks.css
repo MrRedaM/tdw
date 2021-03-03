@@ -1,0 +1,25 @@
+.marks{
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.marks thead{
+    border-bottom: black solid 1px;
+}
+
+.marks tr{
+    border-bottom: black solid 1px;
+}
+
+.marks tr:last-child{
+    border-bottom: none;
+}
+
+.marks th{
+    padding: 1em;
+}
+
+.marks td{
+    padding: 1em;
+}

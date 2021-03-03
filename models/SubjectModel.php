@@ -25,4 +25,15 @@ class SubjectModel extends Model{
         return $this->request($sql);
     }
 
+    public function findByClassroom($id, string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->subjectTable." WHERE year IN 
+            (SELECT id FROM ".$this->yearTable." WHERE id IN 
+            (SELECT school_year FROM ".$this->classroomTable." WHERE id = ".$id."))";
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->requestAll($sql);
+    }
+
+
 }

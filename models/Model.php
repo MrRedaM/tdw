@@ -21,6 +21,9 @@ abstract class Model {
     protected $tagTable = 'Tag';
     protected $receptionTable = 'Reception';
     protected $foodTable = 'Food';
+    protected $markTable = 'Mark';
+    protected $activityTable = 'Activity';
+    protected $registerTable = 'Registration';
     protected $stringTable = 'String';
 
     protected $_connexion;

@@ -22,22 +22,22 @@
     </div>
     <div class="article">
         <div class="article_image">
-            <a href="<?= PRE ?>/teachers/cycle/1"><img src="<?= PRE ?>/res/images/notes.png" onerror="this.src='/tdw/res/images/default.png';"></a>
+            <a href="<?= PRE ?>/student/marks"><img src="<?= PRE ?>/res/images/notes.png" onerror="this.src='/tdw/res/images/default.png';"></a>
         </div>
         <div class="article_text">
-            <h3><a href="<?= PRE ?>/teachers/cycle/1">Mes notes</a></h3>
+            <h3><a href="<?= PRE ?>/student/marks">Mes notes</a></h3>
             <p>Consulter vos notes</p>
-            <a href="<?= PRE ?>/teachers/cycle/1">Consulter →</a>
+            <a href="<?= PRE ?>/student/marks">Consulter →</a>
         </div>
     </div>
     <div class="article">
         <div class="article_image">
-            <a href="<?= PRE ?>/schedule/cycle/0"><img src="<?= PRE ?>/res/images/activities.png" onerror="this.src='/tdw/res/images/default.png';"></a>
+            <a href="<?= PRE ?>/student/activities"><img src="<?= PRE ?>/res/images/activities.png" onerror="this.src='/tdw/res/images/default.png';"></a>
         </div>
         <div class="article_text">
-            <h3><a href="<?= PRE ?>/schedule/cycle/0">Mes activités</a></h3>
+            <h3><a href="<?= PRE ?>/student/activities">Mes activités</a></h3>
             <p>Consulter vos activités extrascolaires</p>
-            <a href="<?= PRE ?>/schedule/cycle/0"">Consulter →</a>
+            <a href="<?= PRE ?>/student/activities">Consulter →</a>
         </div>
     </div>
     <div class="article">
