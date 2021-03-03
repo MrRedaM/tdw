@@ -159,6 +159,7 @@
 
 .read_title h1{
     font-family: 'Montserrat-ExtraBold', 'Montserrat-SemiBold';
+    padding: 0;
 }
 
 .read_title p{

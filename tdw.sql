@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 03, 2021 at 12:52 AM
+-- Generation Time: Mar 03, 2021 at 06:41 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `tdw`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Activity`
+--
+
+CREATE TABLE `Activity` (
+  `id` int(16) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Activity`
+--
+
+INSERT INTO `Activity` (`id`, `name`, `image`) VALUES
+(1, 'Musique', 'music.jpg'),
+(2, 'Dessin', 'paint.jpg'),
+(3, 'Athlétisme', 'athletics.jpg'),
+(4, 'Natation', 'swim.jpg');
 
 -- --------------------------------------------------------
 
@@ -136,6 +158,29 @@ INSERT INTO `Food` (`id`, `day`, `menu`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Mark`
+--
+
+CREATE TABLE `Mark` (
+  `id` int(16) NOT NULL,
+  `student` int(16) NOT NULL,
+  `subject` int(16) NOT NULL,
+  `mark` int(4) NOT NULL,
+  `note` varchar(100) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Mark`
+--
+
+INSERT INTO `Mark` (`id`, `student`, `subject`, `mark`, `note`) VALUES
+(1, 4, 1, 14, 'تلميذ مجتهد'),
+(2, 4, 2, 16, 'Très bon travail'),
+(3, 5, 6, 16, 'Very good');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Paragraph`
 --
 
@@ -171,7 +216,7 @@ CREATE TABLE `Person` (
   `phone2` varchar(16) DEFAULT NULL,
   `phone3` varchar(16) DEFAULT NULL,
   `mail` varchar(30) NOT NULL,
-  `passwd_hash` varchar(32) NOT NULL
+  `passwd_hash` varchar(32) NOT NULL DEFAULT 'd41d8cd98f00b204e9800998ecf8427e'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -183,9 +228,10 @@ INSERT INTO `Person` (`id`, `last_name`, `first_name`, `address`, `phone1`, `pho
 (2, 'Prof1', 'Ahmed', 'Alger', '0545346245', 'N/A', 'N/A', 'simoh@esi.dz', ''),
 (3, 'Prof2', 'Mohamed', 'Alger', '0737827743', 'N/A', 'N/A', 'smahat@esi.dz', ''),
 (4, 'Etudiant1', 'Reda', 'Alger', '0553492859', '0555493853', 'N/A', 'morsli@esi.dz', '3de86576bd3033b6d462cdd9e6c14c8a'),
-(5, 'Etudiant2', 'Ilyes', 'Tizi', '0539483722', 'N/A', 'N/A', 'bacha@esi.dz', '2557d3311daf58f80ae6f0f2b6e07244'),
-(6, 'Parent1', 'Hamid', 'home', '0539847384', 'N/A', 'N/A', 'hamid@gmail.com', ''),
-(7, 'Parent2', 'Mustapha', 'Tizi', '0634245464', 'N/A', 'N/A', 'bacha@gmail.com', '');
+(5, 'Etudiant2', 'Ilyes', 'Tizi', '0539483722', 'N/A', 'N/A', 'bacha@esi.dz', 'd41d8cd98f00b204e9800998ecf8427e'),
+(6, 'Parent1', 'Hamid', 'home', '0539847384', 'N/A', 'N/A', 'hamid@gmail.com', '37fff357c237d67f2365eab6706bc898'),
+(7, 'Parent2', 'Mustapha', 'Tizi', '0634245464', 'N/A', 'N/A', 'bacha@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e'),
+(25, 'Morsli', 'Yacine', 'N/A', 'Home', 'N/A', 'N/A', 'yacine@esi.dz', '');
 
 -- --------------------------------------------------------
 
@@ -236,6 +282,30 @@ CREATE TABLE `Reception` (
 
 INSERT INTO `Reception` (`id`, `teacher`, `day`, `start`, `end`) VALUES
 (1, 2, 3, '14:00:00', '16:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Registration`
+--
+
+CREATE TABLE `Registration` (
+  `id` int(16) NOT NULL,
+  `student` int(16) NOT NULL,
+  `activity` int(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Registration`
+--
+
+INSERT INTO `Registration` (`id`, `student`, `activity`) VALUES
+(1, 4, 3),
+(2, 4, 4),
+(3, 4, 1),
+(4, 25, 2),
+(5, 25, 4),
+(6, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -295,7 +365,8 @@ CREATE TABLE `Student` (
 
 INSERT INTO `Student` (`id`, `classroom`, `tutor`) VALUES
 (4, 1, 6),
-(5, 3, 7);
+(5, 3, 7),
+(25, 2, 6);
 
 -- --------------------------------------------------------
 
@@ -388,6 +459,12 @@ INSERT INTO `Tutor` (`id`) VALUES
 --
 
 --
+-- Indexes for table `Activity`
+--
+ALTER TABLE `Activity`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `Admin`
 --
 ALTER TABLE `Admin`
@@ -419,6 +496,14 @@ ALTER TABLE `Food`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `Mark`
+--
+ALTER TABLE `Mark`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `mark_student` (`student`),
+  ADD KEY `mark_subject` (`subject`);
+
+--
 -- Indexes for table `Paragraph`
 --
 ALTER TABLE `Paragraph`
@@ -445,6 +530,14 @@ ALTER TABLE `Program`
 ALTER TABLE `Reception`
   ADD PRIMARY KEY (`id`),
   ADD KEY `reception_teacher` (`teacher`);
+
+--
+-- Indexes for table `Registration`
+--
+ALTER TABLE `Registration`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `register_student` (`student`),
+  ADD KEY `register_activity` (`activity`);
 
 --
 -- Indexes for table `SchoolYear`
@@ -497,6 +590,12 @@ ALTER TABLE `Tutor`
 --
 
 --
+-- AUTO_INCREMENT for table `Activity`
+--
+ALTER TABLE `Activity`
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `Article`
 --
 ALTER TABLE `Article`
@@ -521,6 +620,12 @@ ALTER TABLE `Food`
   MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `Mark`
+--
+ALTER TABLE `Mark`
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `Paragraph`
 --
 ALTER TABLE `Paragraph`
@@ -530,7 +635,7 @@ ALTER TABLE `Paragraph`
 -- AUTO_INCREMENT for table `Person`
 --
 ALTER TABLE `Person`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `Program`
@@ -543,6 +648,12 @@ ALTER TABLE `Program`
 --
 ALTER TABLE `Reception`
   MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `Registration`
+--
+ALTER TABLE `Registration`
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `SchoolYear`
@@ -579,6 +690,13 @@ ALTER TABLE `Classroom`
   ADD CONSTRAINT `class_year` FOREIGN KEY (`school_year`) REFERENCES `SchoolYear` (`id`);
 
 --
+-- Constraints for table `Mark`
+--
+ALTER TABLE `Mark`
+  ADD CONSTRAINT `mark_student` FOREIGN KEY (`student`) REFERENCES `Student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `mark_subject` FOREIGN KEY (`subject`) REFERENCES `Subject` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `Program`
 --
 ALTER TABLE `Program`
@@ -591,6 +709,13 @@ ALTER TABLE `Program`
 --
 ALTER TABLE `Reception`
   ADD CONSTRAINT `reception_teacher` FOREIGN KEY (`teacher`) REFERENCES `Teacher` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Registration`
+--
+ALTER TABLE `Registration`
+  ADD CONSTRAINT `register_activity` FOREIGN KEY (`activity`) REFERENCES `Activity` (`id`),
+  ADD CONSTRAINT `register_student` FOREIGN KEY (`student`) REFERENCES `Student` (`id`);
 
 --
 -- Constraints for table `SchoolYear`

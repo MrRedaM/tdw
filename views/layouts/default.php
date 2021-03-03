@@ -39,7 +39,7 @@
                     </ul>
                 </li>
                 <li><a href="<?= PRE ?>/student">Espace élève</a></li>
-                <li><a href="<?= PRE ?>/parent">Espace parent</a></li>
+                <li><a href="<?= PRE ?>/parents">Espace parent</a></li>
                 <li><a href="<?= PRE ?>/contact">Contact</a></li>
             </ul>
         </div>

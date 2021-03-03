@@ -146,4 +146,29 @@ class AccountModel extends Model{
         return $this->request($sql);
     }
 
+    public function connectTutor($mail, $pass){
+        $sql = "SELECT * FROM ".$this->personTable." WHERE ( mail = '".$mail."' 
+            AND passwd_hash = '".md5($pass)."' AND id IN 
+            (SELECT id FROM ".$this->tutorTable."))";
+        return $this->request($sql);
+    }
+
+    public function getStudentsByTutor($id, string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->studentTable." WHERE tutor = ".$id;
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->requestAll($sql);
+    }
+
+    public function getPersonsByTutor($id, string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->personTable." WHERE id IN 
+            (SELECT id FROM ".$this->studentTable." WHERE tutor = ".$id.")";
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->requestAll($sql);
+    }
+
+
 }

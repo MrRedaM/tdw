@@ -129,6 +129,10 @@ header {
     color: darkslategray;
 }
 
+.top_menu ul li a{
+    transition: 0.3s;
+}
+
 .top_menu ul li:hover a{
     text-decoration: none;
     color: white;
@@ -137,6 +141,7 @@ header {
 
 .top_menu ul li{
     padding: 2em 1.5em 2em 1.5em;
+    transition: 0.3s;
 }
 
 .top_menu ul li:hover{
