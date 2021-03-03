@@ -1,0 +1,15 @@
+.info{
+    padding: 2em;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.info p:nth-child(2n+1){
+    font-family: 'Montserrat-SemiBold';
+}
+
+.info p:nth-child(2n){
+    font-family: 'Montserrat-Medium';
+}

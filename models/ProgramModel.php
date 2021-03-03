@@ -42,4 +42,12 @@ class ProgramModel extends Model{
         }
         return $this->requestAll($sql);
     }
+
+    public function findByClassroom($id, string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->table." WHERE classroom = ".$id;
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->requestAll($sql);
+    }
 }

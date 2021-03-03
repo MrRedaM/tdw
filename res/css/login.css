@@ -3,6 +3,8 @@
     margin: 1em;
     padding: 2em;
     border-radius: 1em;
+    width:max-content;
+    margin: auto;
 }
 
 .login h2{
@@ -17,6 +19,8 @@
     margin: auto;
     gap: 1em;
     width: min-content;
+    padding: 2em;
+    border-radius: 1em;
 }
 
 .login input{

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/tdw/res/css/teachers.css">
     <link rel="stylesheet" href="/tdw/res/css/menu.css">
     <link rel="stylesheet" href="/tdw/res/css/login.css">
+    <link rel="stylesheet" href="/tdw/res/css/account.css">
     
 </head>
 

@@ -25,4 +25,12 @@ class Schedule extends Controller{
         $this->render('schedules', compact('classrooms', 'programs', 'teachers', 'subjects'));
     }
 
+
+    public function classroom($id){
+        $programs = $this->ProgramModel->findByClassroom($id);
+        $teachers = $this->AccountModel->getTeachers();
+        $classrooms = $this->ClassroomModel->findByCycle($id); 
+        $subjects = $this->SubjectModel->getAll();
+        $this->render('schedules', compact('classrooms', 'programs', 'teachers', 'subjects'));
+    }
 }

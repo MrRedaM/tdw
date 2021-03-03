@@ -33,4 +33,24 @@ class ClassroomModel extends Model{
         }
         return $this->requestAll($sql);
     }
+
+    public function getYearFromClassroom($id, string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->yearTable." WHERE id IN 
+            (SELECT school_year FROM ".$this->classroomTable." WHERE id = ".$id.")";
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->request($sql);
+    }
+
+    public function getCycleFromClassroom($id, string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->cycleTable." WHERE id IN 
+            (SELECT cycle FROM ".$this->yearTable." WHERE id IN 
+            (SELECT school_year FROM ".$this->classroomTable." WHERE id = ".$id."))";
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->request($sql);
+    }
+
 }

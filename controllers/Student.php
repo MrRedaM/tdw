@@ -7,6 +7,10 @@ class Student extends Controller{
         $this->loadModel('AccountModel');
         $this->loadModel('ArticleModel');
         $this->loadModel('TagModel');
+        $this->loadModel('ClassroomModel');
+        if(!isset($_SESSION['person_type']) or $_SESSION['person_type'] != 'student'){
+            $this->index();
+        }
     }
 
     public function index($page = 1){
@@ -25,14 +29,15 @@ class Student extends Controller{
     }
 
     public function connect(){
-        $student = $this->AccountModel->connectStudent($_POST['mail'], $_POST['password']);
-        if($student !== false){
+        $person = $this->AccountModel->connectStudent($_POST['mail'], $_POST['password']);
+        if($person !== false){
+            $student = $this->AccountModel->getStudentById($person['id']);
             $_SESSION['person_type'] = 'student';
-            $_SESSION['person'] = $student;
-            $_SESSION['preson']['passws_hash'] = "";
+            unset($person['passwd_hash']);
+            $person['classroom'] = $student['classroom'];
+            $_SESSION['person'] = $person;
             header("Location: ".PRE."/student");
         }else{
-            //header("Location: ".PRE."/student");
             $this->index();
         }
     }
@@ -40,5 +45,12 @@ class Student extends Controller{
     public function disconnect(){
         session_unset();
         header("Location: ".PRE."/student");
+    }
+
+    public function info(){
+        $classroom = $this->ClassroomModel->findById($_SESSION['person']['classroom']);
+        $year = $this->ClassroomModel->getYearFromClassroom($_SESSION['person']['classroom']);
+        $cycle = $this->ClassroomModel->getCycleFromClassroom($_SESSION['person']['classroom']);
+        $this->render('info', compact('classroom', 'year', 'cycle'));
     }
 }

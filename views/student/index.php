@@ -12,7 +12,7 @@
 <div class="grid_container">
     <div class="article">
         <div class="article_image">
-            <a href="<?= PRE ?>/schedule/cycle/1"><img src="<?= PRE ?>/res/images/timetable.png" onerror="this.src='/tdw/res/images/default.png';"></a>
+            <a href="<?= PRE ?>/schedule/classroom/<?= $_SESSION['person']['classroom'] ?>"><img src="<?= PRE ?>/res/images/timetable.png" onerror="this.src='/tdw/res/images/default.png';"></a>
         </div>
         <div class="article_text">
             <h3><a href="<?= PRE ?>/schedule/cycle/1">Mon emploi du temps</a></h3>
@@ -42,12 +42,12 @@
     </div>
     <div class="article">
         <div class="article_image">
-            <a href="<?= PRE ?>/food"><img src="<?= PRE ?>/res/images/account.png" onerror="this.src='/tdw/res/images/default.png';"></a>
+            <a href="<?= PRE ?>/student/info"><img src="<?= PRE ?>/res/images/account.png" onerror="this.src='/tdw/res/images/default.png';"></a>
         </div>
         <div class="article_text">
-            <h3><a href="<?= PRE ?>/food">Mes informations</a></h3>
+            <h3><a href="<?= PRE ?>/student/info">Mes informations</a></h3>
             <p>Consulter vos informations personnelles</p>
-            <a href="<?= PRE ?>/food"">Consulter →</a>
+            <a href="<?= PRE ?>/student/info"">Consulter →</a>
         </div>
     </div>
 </div>
@@ -57,7 +57,7 @@
         <?php if(isset($account['mail']) and $account['mail'] != ""): ?>
             <p>E-mail ou mot de passe incorrect!</p>
         <?php endif; ?>
-        <form method='post' action="<?= PRE ?>/student/connect">
+        <form method='post' action="<?= PRE ?>/student/connect" class="elevate_hover">
             <img src="<?= PRE ?>/res/images/user.png">
             <input type="email" name="mail" id="mail" placeholder="E-mail" value="<?= $account['mail'] ?>">
             <input type="password" name="password" id="password" placeholder="Mot de passe">
@@ -66,7 +66,7 @@
     </div>
 <?php endif; ?>
 
-<h1 class="section_title">Actualités du primaire</h1>
+<h1 class="section_title">Actualités élèves</h1>
 
 <div class="grid_container">
     <?php foreach($articles as $article): ?>
