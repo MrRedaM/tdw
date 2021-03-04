@@ -109,16 +109,6 @@ class AccountModel extends Model{
         return $this->request($sql);
     }
 
-    public function getAdmin(string $mail, string $pass_hash){
-        $sql = "SELECT id FROM ".$this->personTable." WHERE mail='".$mail."' AND passwd_hash='".$pass_hash."'";
-        $person = $this->request($sql);
-        if(isset($person[0])){
-            $sql = "SELECT * FROM ".$this->adminTable." WHERE id='".$person[0]."'";
-            return $this->request($sql);
-        }
-        return null;
-    }
-
     public function getTeacherById($id){
         $sql = "SELECT * FROM ".$this->teacherTable." WHERE id=".$id;
         return $this->request($sql);
@@ -137,6 +127,13 @@ class AccountModel extends Model{
     public function isTeacher($id){
         $sql = "SELECT id FROM ".$this->teacherTable;
         return count($this->request($sql)) == 1;
+    }
+
+    public function connectAdmin($mail, $pass){
+        $sql = "SELECT * FROM ".$this->personTable." WHERE ( mail = '".$mail."' 
+            AND passwd_hash = '".$pass."' AND id IN 
+            (SELECT id FROM ".$this->adminTable."))";
+        return $this->request($sql);
     }
 
     public function connectStudent($mail, $pass){

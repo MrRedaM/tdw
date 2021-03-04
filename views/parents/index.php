@@ -3,7 +3,7 @@
         <p>Connecté en tant que <?= $_SESSION['person']['first_name'] ?></p>
         <div>
             <p>Enfant sélectionné</p>
-            <form method='post' action="<?= PRE ?>/parents/child">
+            <form method='post' action="<?= PRE ?>/parents/child/">
                 <select name="child" id="child">
                     <?php $i = 0; foreach($_SESSION['person']['children'] as $child): ?>
                         <option value="<?= $i ?>"

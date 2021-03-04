@@ -1,0 +1,60 @@
+.admin_table{
+    padding: 1em;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.admin_table th{
+    padding: 1em;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.admin_table tr{
+    border-bottom: black solid 1px;
+}
+
+.admin_table tr:last-child{
+    border-bottom: none;
+}
+
+.admin_table td{
+    padding: 1em;
+    text-align: center;
+}
+
+.admin_table .actions{
+    display: flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    gap: 1em;
+}
+
+.admin_table .actions .delete{
+    padding: 0.4em 0.3em 0.4em 0.3em;
+    margin: auto 0;
+    background-color: #ff000099;
+    color: white;
+    border: none;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+
+.new{
+    width: 100%;
+    background-color: dodgerblue;
+    padding: 1em;
+    margin: 1em auto;
+    border-radius: 4em;
+    color: white;
+    border: none;
+    font-family: 'Montserrat-SemiBold';
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.new:hover{
+    opacity: 1;
+    transition: 0.3s;
+}

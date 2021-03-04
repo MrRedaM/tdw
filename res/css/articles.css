@@ -13,7 +13,7 @@
     -moz-box-shadow: none;
     box-shadow: none;
     transition: 0.3s;
-    max-width:fit-content;
+    height: fit-content;
 }
 
 .article:hover{

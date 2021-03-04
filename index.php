@@ -5,9 +5,11 @@
 
     require_once(ROOT.'models/Model.php');
     require_once(ROOT.'controllers/Controller.php');
+    require_once(ROOT.'controllers/AdminController.php');
     require_once(ROOT.'utils/TagUtils.php');
     require_once(ROOT.'utils/DateUtils.php');
     require_once(ROOT.'utils/ColorUtils.php');
+    require_once(ROOT.'utils/S.php');
 
     
     $params = explode('/', $_GET['p']);

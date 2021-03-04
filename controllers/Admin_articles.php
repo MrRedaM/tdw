@@ -1,8 +1,9 @@
 <?php
 
-class Admin_articles extends Controller{
+class Admin_articles extends AdminController{
 
     public function __construct(){
+        parent::__construct();
         $this->loadModel('ArticleModel');
         $this->loadModel('TagModel');
     }

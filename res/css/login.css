@@ -84,3 +84,17 @@
     gap: 1em;
     margin: auto;
 }
+
+.elevate_hover{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.elevate_hover:hover{
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    transition: 0.3s;
+}

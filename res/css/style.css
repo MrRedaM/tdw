@@ -149,20 +149,18 @@ header {
     transition: 0.3s;
 }
 
-.top_menu ul ul{
+.top_menu ul li ul{
     display: none;
-    visibility: hidden;
     opacity: 0;
-    transition: visibility 0, opacity 0.3s;
+    transition: 0.3s;
 }
 
 .top_menu ul li:hover ul{
     display: block;
     position: absolute;
     background-color: dodgerblue;
-    visibility: visible;
     opacity: 1;
-    transition: visibility 0, opacity 0.3s;
+    transition: 0.3s;
 }
 
 /* FOOTER =================================================== */
@@ -179,18 +177,4 @@ footer p{
 
 footer *{
     text-align: center;
-}
-
-.elevate_hover{
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    transition: 0.3s;
-}
-
-.elevate_hover:hover{
-    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
-    transition: 0.3s;
 }
