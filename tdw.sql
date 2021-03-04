@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 03, 2021 at 06:41 PM
+-- Generation Time: Mar 04, 2021 at 11:29 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -68,7 +68,7 @@ INSERT INTO `Admin` (`id`) VALUES
 
 CREATE TABLE `Article` (
   `id` int(16) NOT NULL,
-  `title` varchar(32) NOT NULL,
+  `title` varchar(100) NOT NULL,
   `image` varchar(100) NOT NULL DEFAULT 'default.png',
   `description` text NOT NULL,
   `tags` varchar(100) NOT NULL DEFAULT '#1#',
@@ -89,7 +89,9 @@ INSERT INTO `Article` (`id`, `title`, `image`, `description`, `tags`, `created`)
 (20, 'Reprise des cours', 'classroom.jpg', 'La reprise des cours est prévu pour le dimanche 20 septembre 2020. Morbi eu neque vitae nisl vehicula congue. Aliquam a ultricies dui. Nunc malesuada consectetur consequat. In varius metus a malesuada fermentum. Suspendisse vel mattis nulla, rhoncus iaculis turpis. Nullam orci ex, imperdiet quis sodales a, egestas blandit arcu. Etiam tincidunt euismod libero eget dapibus. Curabitur porta orci ut dolor eleifend, at blandit neque posuere. ', '#1#', '2021-02-27 20:00:00'),
 (21, 'Mesures sanitaires', 'class1.webp', 'Maecenas porttitor felis nec nisl volutpat, ut efficitur ante efficitur. Praesent ultricies sodales interdum. Vestibulum eget lectus vitae lectus tristique dignissim. Sed eu fermentum ipsum. Aenean vel enim risus. Pellentesque varius nec mauris ac tincidunt. Nullam dictum, lacus cursus pulvinar congue, dui lacus rutrum lacus, vitae dapibus enim risus a lectus. Mauris eget tristique ex. ', '#1#', '2021-02-27 00:00:00'),
 (22, 'Article 9', 'school1.png', 'Fusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. ', '#1#', '2021-02-27 00:00:00'),
-(23, 'Concernant les parents', '', 'Fusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. \r\n\r\nFusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. ', '#6#', '2021-02-27 23:07:31');
+(23, 'Concernant les parents', '', 'Fusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. \r\n\r\nFusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. ', '#6#', '2021-02-27 23:07:31'),
+(24, 'Inscriptions bibliothèque', 'bibli.jpg', ' Cras ac porta est. Vivamus nunc odio, egestas vitae orci vel, tincidunt pharetra dolor. Maecenas facilisis, lorem non egestas iaculis, dolor felis consectetur quam, nec pharetra magna mi eget dolor. Mauris fermentum quam id felis cursus cursus. Nullam placerat, nisl non pellentesque lobortis, nibh dui tempor quam, et convallis nunc ex nec nunc. Etiam ultricies sagittis nisi, at ullamcorper odio tristique ut. Nunc vitae molestie mauris. Donec pulvinar sed lorem eget posuere. Cras mattis mi nec felis vehicula, quis luctus lorem aliquet. Curabitur lacus arcu, vulputate id orci luctus, maximus rhoncus mi. Nulla ut velit ultrices dolor pretium commodo sed sed felis. Integer iaculis felis a dolor placerat tristique. Integer tempus sollicitudin dolor, sed molestie dolor porta non. Nulla aliquam vulputate imperdiet.\r\n\r\nSed ut venenatis sapien. Nunc sollicitudin tincidunt dui eget ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum lacinia lorem non ornare lacinia. Aliquam rutrum, ex at fermentum hendrerit, lacus turpis facilisis mauris, nec viverra mi justo efficitur justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Maecenas et viverra lacus. Mauris posuere ullamcorper leo, sit amet ullamcorper erat maximus a. Donec libero nisi, molestie ut augue ut, sollicitudin lobortis diam. Aliquam non arcu pellentesque nisl convallis blandit. Mauris viverra viverra nibh, vel fermentum massa congue quis. Pellentesque viverra sit amet nunc in elementum. Aenean nec quam at elit suscipit pretium. Morbi in leo et libero finibus varius non varius diam. Nulla nulla mi, tempor at lacus sit amet, gravida euismod est. ', '#5#', '2021-03-04 20:33:54'),
+(25, 'Long title here omg please reduce it!', 'class2.jpg', ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet viverra arcu. Curabitur sed vestibulum arcu. Curabitur pulvinar lorem in lectus finibus, vel posuere mi luctus. Pellentesque dapibus turpis ut tortor lobortis molestie. Integer erat nunc, sollicitudin ac interdum in, pellentesque ut purus. Suspendisse pulvinar ipsum vel tortor luctus pretium. Mauris commodo elementum sem, nec aliquam enim congue eget. Suspendisse ac massa at risus pharetra suscipit.\r\n\r\nCras ac porta est. Vivamus nunc odio, egestas vitae orci vel, tincidunt pharetra dolor. Maecenas facilisis, lorem non egestas iaculis, dolor felis consectetur quam, nec pharetra magna mi eget dolor. Mauris fermentum quam id felis cursus cursus. Nullam placerat, nisl non pellentesque lobortis, nibh dui tempor quam, et convallis nunc ex nec nunc. Etiam ultricies sagittis nisi, at ullamcorper odio tristique ut. Nunc vitae molestie mauris. Donec pulvinar sed lorem eget posuere. Cras mattis mi nec felis vehicula, quis luctus lorem aliquet. Curabitur lacus arcu, vulputate id orci luctus, maximus rhoncus mi. Nulla ut velit ultrices dolor pretium commodo sed sed felis. Integer iaculis felis a dolor placerat tristique. Integer tempus sollicitudin dolor, sed molestie dolor porta non. Nulla aliquam vulputate imperdiet. ', '#1#', '2021-03-04 21:01:30');
 
 -- --------------------------------------------------------
 
@@ -305,7 +307,8 @@ INSERT INTO `Registration` (`id`, `student`, `activity`) VALUES
 (3, 4, 1),
 (4, 25, 2),
 (5, 25, 4),
-(6, 5, 1);
+(6, 5, 1),
+(7, 4, 2);
 
 -- --------------------------------------------------------
 
@@ -345,6 +348,9 @@ CREATE TABLE `String` (
 --
 
 INSERT INTO `String` (`id`, `value`) VALUES
+('contact_fax', '+44-208-1234567'),
+('contact_mail', 'contact@my-school.dz'),
+('contact_phone', '+213 232 24 65 98'),
 ('site_title', 'MySchool');
 
 -- --------------------------------------------------------
@@ -599,7 +605,7 @@ ALTER TABLE `Activity`
 -- AUTO_INCREMENT for table `Article`
 --
 ALTER TABLE `Article`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `Classroom`
@@ -653,7 +659,7 @@ ALTER TABLE `Reception`
 -- AUTO_INCREMENT for table `Registration`
 --
 ALTER TABLE `Registration`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `SchoolYear`

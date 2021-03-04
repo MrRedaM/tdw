@@ -1,8 +1,9 @@
 <?php
 
-class Admin_calendar extends Controller{
+class Admin_calendar extends AdminController{
 
     public function __construct(){
+        parent::__construct();
         $this->loadModel('ProgramModel');
         $this->loadModel('SubjectModel');
         $this->loadModel('AccountModel');

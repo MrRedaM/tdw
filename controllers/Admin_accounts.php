@@ -1,8 +1,9 @@
 <?php
 
-class Admin_accounts extends Controller{
+class Admin_accounts extends AdminController{
 
     public function __construct(){
+        parent::__construct();
         $this->loadModel('AccountModel');
         $this->loadModel('ClassroomModel');
     }

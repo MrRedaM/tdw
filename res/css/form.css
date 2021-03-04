@@ -102,3 +102,10 @@
 .vform .tag:nth-child(2n){
     background-color: #0000ff09;
 }
+
+.p_page{
+    padding: 1em;
+    margin: 1em;
+    background-color: white;
+    border-radius: 1em;
+}

@@ -1,8 +1,9 @@
 <?php
 
-class Admin_presentation extends Controller{
+class Admin_presentation extends AdminController{
 
     public function __construct(){
+        parent::__construct();
         $this->loadModel('PresentationModel');
     }
 
