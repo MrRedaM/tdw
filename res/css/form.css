@@ -13,6 +13,10 @@
     border-bottom: black solid 1px;
 }
 
+.admin_table tr:nth-child(2n){
+    background-color: #0000ff09;
+}
+
 .admin_table tr:last-child{
     border-bottom: none;
 }
@@ -57,4 +61,44 @@
 .new:hover{
     opacity: 1;
     transition: 0.3s;
+}
+
+.vform{
+    padding: 0 1em 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.vform label{
+    padding: 1em;
+    text-align: center;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.vform input{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.vform textarea, .vform input[type="text"]{
+    margin-bottom: 1em;
+    padding: 1em;
+    font-family: 'Montserrat-Medium';
+}
+
+.vform .tag{
+    display: flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content: space-between;
+    padding: 0 1em 0 1em;
+}
+
+.vform .tag *{
+    margin: auto 0;
+}
+
+.vform .tag:nth-child(2n){
+    background-color: #0000ff09;
 }

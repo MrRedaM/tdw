@@ -9,7 +9,7 @@ class Admin_articles extends AdminController{
     }
 
     public function index(){
-        $articles = $this->ArticleModel->getAll();
+        $articles = $this->ArticleModel->getAll("id DESC");
         $this->render('index', compact('articles'));
     }
 
