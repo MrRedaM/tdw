@@ -7,20 +7,20 @@ class FoodModel extends Model{
         $this->table = $this->foodTable;
     }
 
-    public function insert($index, $text){
-        $sql = "INSERT INTO ".$this->paragraphTable." (`id`, `p_index`, `content`) 
-        VALUES (NULL, ".$index.", '".$text."')";
+    public function insert($date, $plat){
+        $sql = "INSERT INTO ".$this->foodTable." (`id`, `day`, `menu`) 
+        VALUES (NULL, '".$date."', '".$plat."')";
         return $this->request($sql);
     }
 
     public function delete($id){
-        $sql = "DELETE FROM ".$this->paragraphTable." WHERE id=".$id;
+        $sql = "DELETE FROM ".$this->foodTable." WHERE id=".$id;
         return $this->request($sql);
     }
 
-    public function update($id, $index, $text){
-        $sql = "UPDATE ".$this->paragraphTable."
-        SET p_index = ".$index.", content = '".$text."' 
+    public function update($id, $plat){
+        $sql = "UPDATE ".$this->foodTable."
+        SET menu = '".$plat."' 
         WHERE id = ".$id;
         return $this->request($sql);
     }

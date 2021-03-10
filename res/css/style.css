@@ -34,6 +34,7 @@ section{
     width: max-content;
     padding: 2em;
     border-radius: 1em;
+    border: lightgray solid 1px;
 }
 
 section h1{

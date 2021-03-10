@@ -2,6 +2,7 @@
     padding: 1em;
     table-layout: fixed;
     border-collapse: collapse;
+    margin: auto;
 }
 
 .admin_table th{
@@ -101,6 +102,12 @@
 
 .vform .tag:nth-child(2n){
     background-color: #0000ff09;
+}
+
+.vform img{
+    height: 400px;
+    display: block;
+    margin-bottom: 1em;
 }
 
 .p_page{

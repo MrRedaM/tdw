@@ -1,12 +1,14 @@
 <?php
 
-class Admin_teachers extends Controller{
+class Admin_teachers extends AdminController{
 
     public function __construct(){
+        parent::__construct();
         $this->loadModel('ProgramModel');
         $this->loadModel('AccountModel');
         $this->loadModel('ClassroomModel');
         $this->loadModel('SubjectModel');
+        $this->loadModel('TeacherModel');
     }
 
     public function index(string $order = "", string $search = ""){
@@ -22,7 +24,8 @@ class Admin_teachers extends Controller{
         $teacher = $this->AccountModel->findById($id);
         $classrooms = $this->ClassroomModel->getAll();
         $subjects = $this->SubjectModel->getAll();
-        $this->render('view', compact('programs', 'teacher', 'classrooms', 'subjects'));
+        $receptions = $this->TeacherModel->getReceptions($id);
+        $this->render('view', compact('programs', 'teacher', 'classrooms', 'subjects', 'receptions'));
     }
 
     public function new(){

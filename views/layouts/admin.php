@@ -18,7 +18,7 @@
     <header>
         <div class="logo">
             <img src="<?= PRE ?>/res/images/logo.png" alt="">
-            <h1>MySchool (admin)</h1>
+            <h1>MySchool <a href="<?= PRE ?>/admin">(admin)</a></h1>
         </div>
         
     </header>

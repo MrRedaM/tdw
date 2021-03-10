@@ -48,7 +48,7 @@
                 </li>
                 <li>
                         <div class="panel_image">
-                                <a href="<?= PRE ?>/admin_accounts">
+                                <a href="<?= PRE ?>/admin_food">
                                        <img src="<?= PRE ?>/res/images/fork.png" >
                                 </a>
                                 
@@ -57,7 +57,7 @@
                 </li>
                 <li class="elevate_hover">    
                         <div class="panel_image">
-                                <a href="<?= PRE ?>/admin_articles">
+                                <a href="<?= PRE ?>/admin_contact">
                                        <img src="<?= PRE ?>/res/images/contact.png" >
                                 </a>
                                 
@@ -66,7 +66,7 @@
                 </li>
                 <li class="elevate_hover">    
                         <div class="panel_image">
-                                <a href="<?= PRE ?>/admin_articles">
+                                <a href="<?= PRE ?>/admin_settings">
                                        <img src="<?= PRE ?>/res/images/settings.png" >  
                                 </a>
                                   

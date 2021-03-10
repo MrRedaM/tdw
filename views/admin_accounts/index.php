@@ -2,7 +2,7 @@
     <h1>Gestion des comptes</h1>
 
     <form method='post'>
-        <input type="search" name="search" id="search" placeholder="Rechercher..." value="<?= $_POST['search'] ?>">
+        <input type="search" name="search" id="search" placeholder="Rechercher..." <?php if(isset($_POST['search'])) echo "value=".$_POST['search']; ?>">
         <select name="type" id="type" value="<?= $_POST['type'] ?>">
             <option value="type" selected hidden disabled>Type</option>
             <option value="all">Tous</option>
