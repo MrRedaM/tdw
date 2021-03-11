@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/tdw/res/css/filter.css">
     <link rel="stylesheet" href="/tdw/res/css/login.css">
     <link rel="stylesheet" href="/tdw/res/css/account.css">
+    <link rel="stylesheet" href="/tdw/res/css/schedule.css">
 </head>
 <body>
     <header>

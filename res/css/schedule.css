@@ -20,6 +20,7 @@
     border: black solid 2px;
     padding: 0.5em;
     border-radius: 0.5em;
+    overflow: auto;
 }
 
 .timetable table{
@@ -30,7 +31,8 @@
 
 .timetable tr{
     border-bottom: black solid 1px;
-    height: 100px;
+    height: 150px;
+    width: 100%;
 }
 
 .timetable tr:last-child{
@@ -49,9 +51,31 @@
     border-style: solid;
     text-align: center;
     font-family: 'Montserrat-Medium';
+    width: max-content;
+    height: max-content;
 }
 
-.timetable td p{
+.timetable td>div{
     border-radius: 1em;
     padding: 1em;
+}
+
+.timetable td .actions{
+    display: flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    gap: 1em;
+    padding-top: 1em;
+    justify-content: center;
+}
+
+.timetable .actions .delete{
+    padding: 0.4em 0.3em 0.4em 0.3em;
+    margin: auto 0;
+    background-color: #ff000099;
+    color: white;
+    border: none;
+    border-radius: 0.2em;
+    cursor: pointer;
 }

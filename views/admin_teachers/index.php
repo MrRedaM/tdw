@@ -2,7 +2,7 @@
     <h1>Enseignants</h1>
 
     <form method='post'>
-        <input type="search" name="search" id="search" placeholder="Rechercher..." <?php if(isset($_POST['search'])) echo "value=".$_POST['search']; ?>">
+        <input type="search" name="search" id="search" placeholder="Rechercher..." <?php if(isset($_POST['search'])) echo "value=\"".$_POST['search']."\""; ?>">
         <!--input type="submit" value="Filtrer"-->
     </form>
 

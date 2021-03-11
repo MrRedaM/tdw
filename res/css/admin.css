@@ -64,6 +64,14 @@ header{
     text-align: center;
 }
 
+.admin_schedule{
+    margin: 1em;
+    padding: 2em;
+    background-color: white;
+    border-radius: 1em;
+    border: lightgray solid 1px;
+}
+
 /* PANEL ==================================================== */
 
 .panel{

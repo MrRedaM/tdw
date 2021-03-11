@@ -7,20 +7,20 @@ class ProgramModel extends Model{
         $this->table = $this->programTable;
     }
 
-    public function insert($title, $desc){
-        $sql = "INSERT INTO ".$this->articleTable." (`id`, `title`, `description`) 
-        VALUES (NULL, '".$title."', '".$desc."')";
+    public function insert($teacher, $classroom, $subject, $day, $start, $end){
+        $sql = "INSERT INTO ".$this->programTable." (`id`, `teacher`, `subject`, `classroom`, `day`, `start`, `end`) 
+        VALUES (NULL, ".$teacher.", ".$subject.", ".$classroom.", ".$day.", '".$start."', '".$end."')";
         return $this->request($sql);
     }
 
     public function delete($id){
-        $sql = "DELETE FROM ".$this->articleTable." WHERE id=".$id;
+        $sql = "DELETE FROM ".$this->programTable." WHERE id=".$id;
         return $this->request($sql);
     }
 
-    public function update($id, $title, $desc){
-        $sql = "UPDATE ".$this->articleTable."
-        SET title = '".$title."', description = '".$desc."' 
+    public function update($id, $teacher, $subject, $start, $end){
+        $sql = "UPDATE ".$this->programTable."
+        SET teacher = ".$teacher.", subject = ".$subject.", start = '".$start."', end = '".$end."' 
         WHERE id = ".$id;
         return $this->request($sql);
     }
