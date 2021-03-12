@@ -24,6 +24,7 @@ abstract class Model {
     protected $markTable = 'Mark';
     protected $activityTable = 'Activity';
     protected $registerTable = 'Registration';
+    protected $infoTable = 'CycleInfo';
     protected $stringTable = 'String';
 
     protected $_connexion;

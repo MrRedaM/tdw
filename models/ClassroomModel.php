@@ -53,4 +53,13 @@ class ClassroomModel extends Model{
         return $this->request($sql);
     }
 
+    public function getCycleInfos($id, string $order = "", string $search = ""){
+        $sql = "SELECT * FROM ".$this->infoTable." WHERE cycle IN 
+            (SELECT id FROM ".$this->cycleTable." WHERE id = ".$id.")";
+        if($order != ""){
+            $sql = $sql." ORDER BY ".$order;
+        }
+        return $this->requestAll($sql);
+    }
+
 }

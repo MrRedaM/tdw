@@ -23,12 +23,12 @@
     </div>
     <div class="article">
         <div class="article_image">
-            <a href="<?= PRE ?>/schedule/cycle/0"><img src="<?= PRE ?>/res/images/info.png" onerror="this.src='/tdw/res/images/default.png';"></a>
+            <a href="<?= PRE ?>/info/cycle/2"><img src="<?= PRE ?>/res/images/info.png" onerror="this.src='/tdw/res/images/default.png';"></a>
         </div>
         <div class="article_text">
-            <h3><a href="<?= PRE ?>/schedule/cycle/0">Informations utiles</a></h3>
+            <h3><a href="<?= PRE ?>/info/cycle/2">Informations utiles</a></h3>
             <p>Consulter les informations utiles concernant le secondaire</p>
-            <a href="<?= PRE ?>/schedule/cycle/0"">Consulter →</a>
+            <a href="<?= PRE ?>/info/cycle/2"">Consulter →</a>
         </div>
     </div>
     <div class="article">

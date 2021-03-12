@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 04, 2021 at 11:29 PM
+-- Generation Time: Mar 12, 2021 at 07:25 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -137,6 +137,31 @@ INSERT INTO `Cycle` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `CycleInfo`
+--
+
+CREATE TABLE `CycleInfo` (
+  `id` int(16) NOT NULL,
+  `cycle` int(16) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `info` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `CycleInfo`
+--
+
+INSERT INTO `CycleInfo` (`id`, `cycle`, `title`, `info`) VALUES
+(1, 1, 'Info 1', ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum nisi vel turpis auctor interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla aliquet egestas felis ut porta. Aenean eu malesuada orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis bibendum, massa quis commodo lobortis, arcu lacus interdum libero, vitae feugiat erat ipsum non libero. Suspendisse vitae tincidunt nibh. Nullam sit amet justo nunc. Suspendisse blandit massa id pellentesque sollicitudin. '),
+(2, 1, 'Info 2', ' Integer nec ullamcorper quam, quis commodo dolor. Nullam vitae ipsum fringilla, sollicitudin lectus at, elementum eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce sit amet enim non urna gravida laoreet. Phasellus maximus nisl lacus, non hendrerit lectus vehicula iaculis. Pellentesque semper mi elit, in vestibulum velit vehicula id. Sed tempus ultricies est, quis imperdiet velit malesuada non. '),
+(3, 2, 'Info 1', ' Etiam fringilla sapien quis massa placerat, et viverra dolor fermentum. Pellentesque ullamcorper odio id nulla semper viverra. Sed hendrerit elementum orci, a porta urna hendrerit id. Suspendisse at lectus tincidunt, luctus dui blandit, mollis massa. Nam metus lorem, vehicula sit amet arcu nec, vulputate dignissim quam. Aliquam fringilla facilisis efficitur. Phasellus pulvinar id urna laoreet scelerisque. Nulla at nulla vitae tellus consequat consequat. '),
+(4, 2, 'Info 2', ' Quisque sed volutpat orci. Quisque ornare felis turpis, sit amet mollis odio imperdiet pellentesque. Pellentesque pulvinar et est nec hendrerit. Donec ornare nisi vitae arcu blandit euismod. Sed porttitor dolor vehicula, accumsan metus vel, condimentum ex. Nulla non congue orci. Nunc volutpat varius pharetra. Quisque vitae mauris ut felis interdum dapibus. Nam diam eros, finibus nec magna sed, aliquam tempor ante. Sed nisl nisi, eleifend ac nisl quis, sagittis placerat ligula. '),
+(5, 3, 'Info 1', ' Etiam enim leo, vestibulum sit amet lorem non, ornare mattis diam. Proin nec maximus eros, at bibendum urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut fermentum augue in facilisis finibus. Curabitur consequat pretium velit vel egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque eu leo leo. '),
+(6, 3, 'Info 2', ' Vivamus a convallis ex. Fusce iaculis mauris ligula, ut aliquam massa gravida a. Etiam pharetra pulvinar enim in eleifend. Aenean venenatis sem nec odio ornare, in vehicula ex sagittis. Duis lectus quam, dictum consectetur nisl sit amet, dictum euismod tellus. Ut ac nulla tempus, commodo dolor in, lacinia libero. Mauris fringilla auctor egestas. Nullam iaculis purus at nisl convallis lobortis. Cras hendrerit est eu urna viverra, ut ullamcorper tellus feugiat. Aliquam non ornare odio. Integer et libero eget arcu dictum porta. ');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Food`
 --
 
@@ -256,13 +281,17 @@ CREATE TABLE `Program` (
 --
 
 INSERT INTO `Program` (`id`, `teacher`, `classroom`, `subject`, `day`, `start`, `end`) VALUES
-(1, 2, 1, 1, 1, '08:00:00', '10:00:00'),
 (2, 2, 1, 1, 4, '10:00:00', '12:00:00'),
-(3, 3, 1, 2, 1, '10:05:00', '12:00:00'),
+(3, 3, 1, 2, 1, '11:30:00', '12:00:00'),
 (4, 3, 1, 2, 2, '08:00:00', '10:00:00'),
 (5, 2, 2, 3, 3, '08:00:00', '10:00:00'),
 (6, 3, 2, 6, 5, '13:00:00', '15:00:00'),
-(7, 2, 3, 3, 2, '08:00:00', '12:00:00');
+(8, 2, 1, 1, 3, '08:00:00', '00:00:00'),
+(9, 3, 1, 2, 5, '08:00:00', '12:00:00'),
+(10, 2, 3, 5, 4, '08:00:00', '10:00:00'),
+(13, 2, 1, 1, 1, '08:00:00', '10:02:00'),
+(14, 2, 1, 1, 1, '21:00:00', '21:00:00'),
+(16, 2, 1, 1, 1, '10:00:00', '11:30:00');
 
 -- --------------------------------------------------------
 
@@ -348,9 +377,9 @@ CREATE TABLE `String` (
 --
 
 INSERT INTO `String` (`id`, `value`) VALUES
-('contact_fax', '+44-208-1234567'),
+('contact_fax', '+44-208-1234580'),
 ('contact_mail', 'contact@my-school.dz'),
-('contact_phone', '+213 232 24 65 98'),
+('contact_phone', '+213 232 24 65 90'),
 ('site_title', 'MySchool');
 
 -- --------------------------------------------------------
@@ -496,6 +525,12 @@ ALTER TABLE `Cycle`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `CycleInfo`
+--
+ALTER TABLE `CycleInfo`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `Food`
 --
 ALTER TABLE `Food`
@@ -620,10 +655,16 @@ ALTER TABLE `Cycle`
   MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `CycleInfo`
+--
+ALTER TABLE `CycleInfo`
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `Food`
 --
 ALTER TABLE `Food`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `Mark`
@@ -647,7 +688,7 @@ ALTER TABLE `Person`
 -- AUTO_INCREMENT for table `Program`
 --
 ALTER TABLE `Program`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `Reception`

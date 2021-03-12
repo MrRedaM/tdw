@@ -42,12 +42,26 @@ section h1{
     text-align: center;
 }
 
+section h3{
+    padding: 1em;
+    font-family: 'Montserrat-SemiBold';
+}
+
 .account_img_big{
     display: block;
     margin: auto;
     width: 100px;
     height: auto;
     border-radius: 2em;
+}
+
+.cycle_info{
+    background-color: white;
+    border: lightgray solid 1px;
+    border-radius: 1em;
+    margin: 1em;
+    padding: 2em;
+
 }
 
 /* HEADER ==================================================== */
