@@ -110,6 +110,7 @@ header {
 }
 
 .top_menu{
+    overflow: auto;
     margin: auto;
     height: 100%;
     z-index: 2;
@@ -168,6 +169,7 @@ header {
 /* FOOTER =================================================== */
 
 footer{
+    overflow: auto;
     background-color: white;
     padding: 2em 1em 2em 1em;
     border-top: dodgerblue solid 2px;

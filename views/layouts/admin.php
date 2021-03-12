@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/tdw/res/css/login.css">
     <link rel="stylesheet" href="/tdw/res/css/account.css">
     <link rel="stylesheet" href="/tdw/res/css/schedule.css">
+    <link rel="stylesheet" href="/tdw/res/css/responsive.css">
 </head>
 <body>
     <header>
