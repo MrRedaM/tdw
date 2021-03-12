@@ -2,7 +2,7 @@
     <div class="filters">
         <h1>Filtres</h1>
         <form method='post'>
-            <input type="search" name="search" id="search" placeholder="Rechercher...">
+            <input type="search" name="search" id="search" placeholder="Rechercher..." disabled>
             <!--input type="submit" value="Filtrer"-->
         </form>
     </div>

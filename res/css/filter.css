@@ -9,6 +9,13 @@
     margin: 1em 0 1em 1em;
     padding: 2em;
     border-radius: 1em;
+    height: min-content;
+}
+
+.filters form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
 }
 
 .filters h1{

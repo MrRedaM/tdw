@@ -7,6 +7,17 @@ class TeacherModel extends Model{
         $this->table = $this->teacherTable;
     }
 
+    public function insertReception($teacher, $day, $start, $end){
+        $sql = "INSERT INTO ".$this->receptionTable." (`id`, `teacher`, `day`, `start`, `end`) 
+        VALUES (NULL, ".$teacher.", ".$day.", '".$start."', '".$end."')";
+        return $this->request($sql);
+    }
+
+    public function deleteReception($id){
+        $sql = "DELETE FROM ".$this->receptionTable." WHERE id=".$id;
+        return $this->request($sql);
+    }
+
     public function findTeacherByCycle($id){
         $sql = "SELECT * FROM ".$this->personTable." WHERE id IN 
         (SELECT teacher FROM ".$this->programTable." WHERE classroom IN 

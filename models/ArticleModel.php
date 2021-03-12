@@ -18,12 +18,20 @@ class ArticleModel extends Model{
         return $this->request($sql);
     }
 
-    public function update($id, $title, $desc, $tags){
+    public function update($id, $title, $desc, $tags, $image){
         $sql = "UPDATE ".$this->articleTable."
-        SET title = '".$title."', description = '".$desc."', tags = '".$tags."' 
+        SET title = '".$title."', description = '".$desc."', tags = '".$tags."', image = '".$image."'  
         WHERE id = ".$id;
         return $this->request($sql);
     }
+
+    public function updateNoImage($id, $title, $desc, $tags){
+        $sql = "UPDATE ".$this->articleTable."
+        SET title = '".$title."', description = '".$desc."', tags = '".$tags."'   
+        WHERE id = ".$id;
+        return $this->request($sql);
+    }
+
 
     public function findByTag($id, string $order = "", string $search = ""){
         $sql = "SELECT * FROM ".$this->table." WHERE (tags LIKE '%#".$id."#%' OR tags LIKE '%#1#%')";

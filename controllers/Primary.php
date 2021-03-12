@@ -8,7 +8,7 @@ class Primary extends Controller{
     }
 
     public function index(int $page = 1){
-        $all = $this->ArticleModel->findByTag(2, "id DESC");
+        $all = $this->ArticleModel->findByTag(2, "created DESC");
         $articles = [];
         for($i = ($page * 4 - 4); $i < ($page * 4); $i++){
             if(!isset($all[$i])){

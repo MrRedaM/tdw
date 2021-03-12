@@ -31,12 +31,12 @@ class Admin_articles extends AdminController{
         if(move_uploaded_file($_FILES['image']['tmp_name'], $file) or !isset($_POST['image'])){
             $result = $this->ArticleModel->insert($_POST['article_title'], $_POST['article_desc'], 
                 $_FILES['image']['name'], TagUtils::getString($tags));
-            header("Location: ".PRE."/admin_articles");
-        }else{
-            var_dump($_FILES['image']['tmp_name']);
-            var_dump($file);
+            
+        } else {
+            $result = $this->ArticleModel->insert($_POST['article_title'], $_POST['article_desc'], 
+                "default.png", TagUtils::getString($tags));
         }
-        
+        header("Location: ".PRE."/admin_articles");
     }
 
     public function edit($id){
@@ -54,8 +54,15 @@ class Admin_articles extends AdminController{
                 $i++;
             }
         }
-        $result = $this->ArticleModel->update($id, $_POST['article_title'], 
-            $_POST['article_desc'], TagUtils::getString($tags));
+        $file = "res/images/".basename($_FILES['image']['name']);
+        if(move_uploaded_file($_FILES['image']['tmp_name'], $file)){
+            $result = $this->ArticleModel->update($id, $_POST['article_title'], 
+                $_POST['article_desc'], TagUtils::getString($tags), $_FILES['image']['name']);
+            
+        } elseif(isset($_POST['image'])) {
+            $result = $this->ArticleModel->updateNoImage($id, $_POST['article_title'], 
+                $_POST['article_desc'], TagUtils::getString($tags));
+        }
         header("Location: ".PRE."/admin_articles");
     }
 

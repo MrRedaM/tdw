@@ -14,7 +14,7 @@ class Parents extends Controller{
     }
 
     public function index($page = 1){
-        $all = $this->ArticleModel->findByTag(6, "id DESC");
+        $all = $this->ArticleModel->findByTag(6, "created DESC");
         $articles = [];
         for($i = ($page * 4 - 4); $i < ($page * 4); $i++){
             if(!isset($all[$i])){

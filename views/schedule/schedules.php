@@ -18,7 +18,7 @@
             <h2><?= $classroom['name'] ?></h2>
         
 
-        <div class="timetable">                
+            <div class="timetable">                
             <table>
                 <?php for($day = 1; $day <= 7; $day++): ?>
                     <tr>
@@ -31,13 +31,14 @@
                             <?php case 6: ?><th>Vendredi</th><?php break; ?>
                             <?php case 7: ?><th>Samedi</th><?php break; ?>
                         <?php endswitch; ?>
+
                         <?php foreach($programs as $program): ?>
                             <?php if($program['classroom'] == $classroom['id'] and $program['day'] == $day): ?>
                                 <td> 
                                     
                                     <?php foreach($subjects as $subject): ?>
                                             <?php if($subject['id'] == $program['subject']): ?>
-                                                <p style="background-color: <?= $subject['color'] ?>; color: <?= ColorUtils::getTextColor($subject['color']) ?>;">
+                                                <div style="background-color: <?= $subject['color'] ?>; color: <?= ColorUtils::getTextColor($subject['color']) ?>;">
                                                 <?= $subject['name'] ?>
                                                 <?php break; ?>
                                             <?php endif; ?>
@@ -49,8 +50,9 @@
                                             <?php break; ?>
                                         <?php endif; ?>
                                     <?php endforeach; ?><br>
-                                    (<?= $program['start'] ?> - <?= $program['end'] ?>)     
-                                    </p>                
+                                    (<?= date("G:i", strtotime($program['start'])) ?> - <?= date("G:i", strtotime($program['end'])) ?>)                                 
+                                    </div>  
+
                                 </td>
                             <?php endif; ?>      
                         <?php endforeach; ?> 

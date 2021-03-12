@@ -8,7 +8,7 @@ class Articles extends Controller{
     }
 
     public function index(int $page = 1){
-        $all = $this->ArticleModel->getAll("id DESC");
+        $all = $this->ArticleModel->getAll("created DESC");
         $articles = [];
         for($i = ($page * 8 - 8); $i < ($page * 8); $i++){
             if(!isset($all[$i])){

@@ -1,7 +1,7 @@
 <section>
     <h1>Modifier article</h1>
 
-    <form method="post" action="<?= PRE ?>/admin_articles/applyEdit/<?= $article['id'] ?>" class="vform">
+    <form method="post" action="<?= PRE ?>/admin_articles/applyEdit/<?= $article['id'] ?>" enctype="multipart/form-data" class="vform">
         <label for="article_title">Titre</label>
         <input type="text" name="article_title" id="article_title" placeholder="Titre de l'article"
         value="<?= $article['title'] ?>">

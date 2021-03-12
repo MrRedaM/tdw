@@ -3,8 +3,8 @@
 
     <h2>Heures de travail</h2>
 
-    <form method="post" action="admin_teachers/new">
-        <input type="submit" value="Ajouter"  class="new" disabled>
+    <form method="post" action="<?= PRE ?>/admin_calendar">
+        <input type="submit" value="Ajouter"  class="new">
     </form>
 
     <table class="admin_table">
@@ -64,8 +64,10 @@
 
     <h2>Heures de réception</h2>
 
-    <form method="post" action="admin_teachers/newReception">
-        <input type="submit" value="Ajouter réception"  class="new" disabled>
+    <form method="post" action="<?= PRE ?>/admin_teachers/newReception">
+        <input hidden type="text" name="teacher" id="teacher" value="<?= $teacher['last_name'] ?> <?= $teacher['first_name'] ?>">
+        <input hidden type="text" name="teacher_id" id="teacher_id" value="<?= $teacher['id'] ?>">
+        <input type="submit" value="Ajouter réception"  class="new">
     </form>
 
     <table class="admin_table">
@@ -94,11 +96,12 @@
 
                     <td>
                         <div class="actions">
-                            <form method="post" action="admin_teachers/edit/<?= $reception['id'] ?>">
+                            <form method="post" action="<?= PRE ?>/admin_teachers/edit/<?= $reception['id'] ?>">
                                 <input type="submit" value="Modifier" disabled class="edit">
                             </form>
-                            <form method="post" action="admin_teachers/delete/<?= $reception['id'] ?>">
-                                <input type="submit" value="Supprimer" disabled class="delete">
+                            <form method="post" action="<?= PRE ?>/admin_teachers/deleteReception/<?= $reception['id'] ?>">
+                            <input hidden type="text" name="teacher_id" id="teacher_id" value="<?= $teacher['id'] ?>">
+                                <input type="submit" value="Supprimer" class="delete">
                             </form>
                         </div>
                     </td>

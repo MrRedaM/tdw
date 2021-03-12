@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 12, 2021 at 07:25 PM
+-- Generation Time: Mar 13, 2021 at 12:54 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -80,18 +80,17 @@ CREATE TABLE `Article` (
 --
 
 INSERT INTO `Article` (`id`, `title`, `image`, `description`, `tags`, `created`) VALUES
-(1, 'Article 1', 'image1.jpg', '    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lectus justo, id imperdiet neque ultrices eu. Phasellus imperdiet odio non dolor tempor lacinia. Donec faucibus sit amet arcu at sollicitudin. Aenean facilisis sed ante eu placerat. Morbi sollicitudin velit nisl, posuere viverra turpis volutpat vel. Maecenas aliquet tellus et libero scelerisque suscipit. Nunc eleifend, ante vitae ornare elementum, mauris nulla porttitor lectus, ut mollis purus mi vitae nulla. In hac habitasse platea dictumst.', '#2#5#', '2021-02-27 00:00:00'),
-(2, 'Article 2', 'image2.jpg', 'Ut ut tortor ex. Pellentesque ultrices vel turpis et ultrices. Nunc venenatis nisl at posuere gravida. Curabitur ultrices dui turpis, non vehicula urna molestie quis. Donec vitae orci pulvinar, posuere ex sit amet, viverra purus. Phasellus a elit metus. Curabitur in molestie libero, quis facilisis mauris. Etiam viverra orci et ipsum pellentesque volutpat. Aliquam pretium turpis ac velit tempus, eu euismod lorem facilisis. Suspendisse ut venenatis lacus. In porta est lacinia dapibus faucibus. In mollis fermentum urna eu hendrerit.', '#1#', '2021-02-27 00:00:00'),
-(12, 'Article 3', 'image3.jpg', 'Donec tincidunt finibus est eget eleifend. Duis condimentum non augue id iaculis. Integer quis tempor leo. Sed viverra gravida eros vitae imperdiet. Duis semper, sapien ut porta gravida, libero metus cursus neque, vel aliquet ante ex vel libero. Praesent lectus felis, pulvinar in sagittis a, aliquet sed augue. Duis vel diam fringilla neque dictum bibendum nec at magna. Pellentesque vehicula tellus eu condimentum gravida. Nullam pulvinar vel sapien sit amet pretium. Quisque quis neque a risus accumsan mattis. Nulla fermentum justo vitae ullamcorper cursus. Cras tincidunt mi non rutrum congue. Curabitur porttitor ipsum ligula, sed porta nunc ultricies quis. Quisque augue dolor, faucibus vitae gravida ac, porttitor iaculis orci. ', '#1#', '2021-02-27 00:00:00'),
-(17, 'Article 4', 'image4.jpg', '    Ut ut tortor ex. Pellentesque ultrices vel turpis et ultrices. Nunc venenatis nisl at posuere gravida. Curabitur ultrices dui turpis, non vehicula urna molestie quis. Donec vitae orci pulvinar, posuere ex sit amet, viverra purus. Phasellus a elit metus. Curabitur in molestie libero, quis facilisis mauris. Etiam viverra orci et ipsum pellentesque volutpat. Aliquam pretium turpis ac velit tempus, eu euismod lorem facilisis. Suspendisse ut venenatis lacus. In porta est lacinia dapibus faucibus. In mollis fermentum urna eu hendrerit.', '#3#', '2021-02-27 00:00:00'),
-(18, 'Article 5', 'default.png', '    Donec tincidunt finibus est eget eleifend. Duis condimentum non augue id iaculis. Integer quis tempor leo. Sed viverra gravida eros vitae imperdiet. Duis semper, sapien ut porta gravida, libero metus cursus neque, vel aliquet ante ex vel libero. Praesent lectus felis, pulvinar in sagittis a, aliquet sed augue. Duis vel diam fringilla neque dictum bibendum nec at magna. Pellentesque vehicula tellus eu condimentum gravida. Nullam pulvinar vel sapien sit amet pretium. Quisque quis neque a risus accumsan mattis. Nulla fermentum justo vitae ullamcorper cursus. Cras tincidunt mi non rutrum congue. Curabitur porttitor ipsum ligula, sed porta nunc ultricies quis. Quisque augue dolor, faucibus vitae gravida ac, porttitor iaculis orci. ', '#2#', '2021-02-27 00:00:00'),
-(19, 'Article 6', 'default.png', '    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lectus justo, id imperdiet neque ultrices eu. Phasellus imperdiet odio non dolor tempor lacinia. Donec faucibus sit amet arcu at sollicitudin. Aenean facilisis sed ante eu placerat. Morbi sollicitudin velit nisl, posuere viverra turpis volutpat vel. Maecenas aliquet tellus et libero scelerisque suscipit. Nunc eleifend, ante vitae ornare elementum, mauris nulla porttitor lectus, ut mollis purus mi vitae nulla. In hac habitasse platea dictumst.', '#4#7#', '2021-02-27 00:00:00'),
-(20, 'Reprise des cours', 'classroom.jpg', 'La reprise des cours est prévu pour le dimanche 20 septembre 2020. Morbi eu neque vitae nisl vehicula congue. Aliquam a ultricies dui. Nunc malesuada consectetur consequat. In varius metus a malesuada fermentum. Suspendisse vel mattis nulla, rhoncus iaculis turpis. Nullam orci ex, imperdiet quis sodales a, egestas blandit arcu. Etiam tincidunt euismod libero eget dapibus. Curabitur porta orci ut dolor eleifend, at blandit neque posuere. ', '#1#', '2021-02-27 20:00:00'),
+(18, 'Examens second cycle', 'secondary1.jpg', '            Donec tincidunt finibus est eget eleifend. Duis condimentum non augue id iaculis. Integer quis tempor leo. Sed viverra gravida eros vitae imperdiet. Duis semper, sapien ut porta gravida, libero metus cursus neque, vel aliquet ante ex vel libero. Praesent lectus felis, pulvinar in sagittis a, aliquet sed augue. Duis vel diam fringilla neque dictum bibendum nec at magna. Pellentesque vehicula tellus eu condimentum gravida. Nullam pulvinar vel sapien sit amet pretium. Quisque quis neque a risus accumsan mattis. Nulla fermentum justo vitae ullamcorper cursus. Cras tincidunt mi non rutrum congue. Curabitur porttitor ipsum ligula, sed porta nunc ultricies quis. Quisque augue dolor, faucibus vitae gravida ac, porttitor iaculis orci. ', '#3#5#6#', '2021-02-27 00:00:00'),
+(19, 'Inscriptions activités sportives', 'sports.jpg', '                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lectus justo, id imperdiet neque ultrices eu. Phasellus imperdiet odio non dolor tempor lacinia. Donec faucibus sit amet arcu at sollicitudin. Aenean facilisis sed ante eu placerat. Morbi sollicitudin velit nisl, posuere viverra turpis volutpat vel. Maecenas aliquet tellus et libero scelerisque suscipit. Nunc eleifend, ante vitae ornare elementum, mauris nulla porttitor lectus, ut mollis purus mi vitae nulla. In hac habitasse platea dictumst.', '#1#', '2021-02-27 00:00:00'),
+(20, 'Reprise des cours moyen', 'classroom.jpg', '        La reprise des cours est prévu pour le dimanche 20 septembre 2020. Morbi eu neque vitae nisl vehicula congue. Aliquam a ultricies dui. Nunc malesuada consectetur consequat. In varius metus a malesuada fermentum. Suspendisse vel mattis nulla, rhoncus iaculis turpis. Nullam orci ex, imperdiet quis sodales a, egestas blandit arcu. Etiam tincidunt euismod libero eget dapibus. Curabitur porta orci ut dolor eleifend, at blandit neque posuere. ', '#3#', '2021-02-27 20:00:00'),
 (21, 'Mesures sanitaires', 'class1.webp', 'Maecenas porttitor felis nec nisl volutpat, ut efficitur ante efficitur. Praesent ultricies sodales interdum. Vestibulum eget lectus vitae lectus tristique dignissim. Sed eu fermentum ipsum. Aenean vel enim risus. Pellentesque varius nec mauris ac tincidunt. Nullam dictum, lacus cursus pulvinar congue, dui lacus rutrum lacus, vitae dapibus enim risus a lectus. Mauris eget tristique ex. ', '#1#', '2021-02-27 00:00:00'),
-(22, 'Article 9', 'school1.png', 'Fusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. ', '#1#', '2021-02-27 00:00:00'),
-(23, 'Concernant les parents', '', 'Fusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. \r\n\r\nFusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. ', '#6#', '2021-02-27 23:07:31'),
-(24, 'Inscriptions bibliothèque', 'bibli.jpg', ' Cras ac porta est. Vivamus nunc odio, egestas vitae orci vel, tincidunt pharetra dolor. Maecenas facilisis, lorem non egestas iaculis, dolor felis consectetur quam, nec pharetra magna mi eget dolor. Mauris fermentum quam id felis cursus cursus. Nullam placerat, nisl non pellentesque lobortis, nibh dui tempor quam, et convallis nunc ex nec nunc. Etiam ultricies sagittis nisi, at ullamcorper odio tristique ut. Nunc vitae molestie mauris. Donec pulvinar sed lorem eget posuere. Cras mattis mi nec felis vehicula, quis luctus lorem aliquet. Curabitur lacus arcu, vulputate id orci luctus, maximus rhoncus mi. Nulla ut velit ultrices dolor pretium commodo sed sed felis. Integer iaculis felis a dolor placerat tristique. Integer tempus sollicitudin dolor, sed molestie dolor porta non. Nulla aliquam vulputate imperdiet.\r\n\r\nSed ut venenatis sapien. Nunc sollicitudin tincidunt dui eget ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum lacinia lorem non ornare lacinia. Aliquam rutrum, ex at fermentum hendrerit, lacus turpis facilisis mauris, nec viverra mi justo efficitur justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Maecenas et viverra lacus. Mauris posuere ullamcorper leo, sit amet ullamcorper erat maximus a. Donec libero nisi, molestie ut augue ut, sollicitudin lobortis diam. Aliquam non arcu pellentesque nisl convallis blandit. Mauris viverra viverra nibh, vel fermentum massa congue quis. Pellentesque viverra sit amet nunc in elementum. Aenean nec quam at elit suscipit pretium. Morbi in leo et libero finibus varius non varius diam. Nulla nulla mi, tempor at lacus sit amet, gravida euismod est. ', '#5#', '2021-03-04 20:33:54'),
-(25, 'Long title here omg please reduce it!', 'class2.jpg', ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet viverra arcu. Curabitur sed vestibulum arcu. Curabitur pulvinar lorem in lectus finibus, vel posuere mi luctus. Pellentesque dapibus turpis ut tortor lobortis molestie. Integer erat nunc, sollicitudin ac interdum in, pellentesque ut purus. Suspendisse pulvinar ipsum vel tortor luctus pretium. Mauris commodo elementum sem, nec aliquam enim congue eget. Suspendisse ac massa at risus pharetra suscipit.\r\n\r\nCras ac porta est. Vivamus nunc odio, egestas vitae orci vel, tincidunt pharetra dolor. Maecenas facilisis, lorem non egestas iaculis, dolor felis consectetur quam, nec pharetra magna mi eget dolor. Mauris fermentum quam id felis cursus cursus. Nullam placerat, nisl non pellentesque lobortis, nibh dui tempor quam, et convallis nunc ex nec nunc. Etiam ultricies sagittis nisi, at ullamcorper odio tristique ut. Nunc vitae molestie mauris. Donec pulvinar sed lorem eget posuere. Cras mattis mi nec felis vehicula, quis luctus lorem aliquet. Curabitur lacus arcu, vulputate id orci luctus, maximus rhoncus mi. Nulla ut velit ultrices dolor pretium commodo sed sed felis. Integer iaculis felis a dolor placerat tristique. Integer tempus sollicitudin dolor, sed molestie dolor porta non. Nulla aliquam vulputate imperdiet. ', '#1#', '2021-03-04 21:01:30');
+(22, 'Annonce lycée', 'school1.png', '        Fusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. ', '#4#', '2021-02-01 00:00:00'),
+(23, 'Concernant les parents', 'parent.webp', '                Fusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. \r\n\r\nFusce vitae suscipit arcu. Phasellus rhoncus nulla lorem. Integer tristique, erat sed sagittis hendrerit, dui tellus fringilla ligula, quis tincidunt erat erat at ante. Nulla gravida vitae tortor sit amet aliquam. Maecenas ut neque mi. Proin ac dolor eget mi elementum venenatis blandit vel libero. Donec hendrerit metus ut egestas faucibus. Vestibulum pellentesque nibh eu magna tincidunt, in porttitor lacus sodales. Aenean imperdiet maximus dolor, eget blandit sem dictum eget. Suspendisse dapibus sit amet tellus in vehicula. Nullam rutrum quam non blandit bibendum. Nulla facilisi. Vestibulum malesuada bibendum quam ac accumsan. Aenean hendrerit dui ut lacus luctus, nec aliquet dolor feugiat. Nam sodales nulla sapien, in imperdiet ante euismod a. Quisque rhoncus egestas metus vitae luctus. ', '#6#', '2021-02-27 23:07:31'),
+(24, 'Inscriptions bibliothèque', 'books.webp', '                 Cras ac porta est. Vivamus nunc odio, egestas vitae orci vel, tincidunt pharetra dolor. Maecenas facilisis, lorem non egestas iaculis, dolor felis consectetur quam, nec pharetra magna mi eget dolor. Mauris fermentum quam id felis cursus cursus. Nullam placerat, nisl non pellentesque lobortis, nibh dui tempor quam, et convallis nunc ex nec nunc. Etiam ultricies sagittis nisi, at ullamcorper odio tristique ut. Nunc vitae molestie mauris. Donec pulvinar sed lorem eget posuere. Cras mattis mi nec felis vehicula, quis luctus lorem aliquet. Curabitur lacus arcu, vulputate id orci luctus, maximus rhoncus mi. Nulla ut velit ultrices dolor pretium commodo sed sed felis. Integer iaculis felis a dolor placerat tristique. Integer tempus sollicitudin dolor, sed molestie dolor porta non. Nulla aliquam vulputate imperdiet.\r\n\r\nSed ut venenatis sapien. Nunc sollicitudin tincidunt dui eget ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum lacinia lorem non ornare lacinia. Aliquam rutrum, ex at fermentum hendrerit, lacus turpis facilisis mauris, nec viverra mi justo efficitur justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Maecenas et viverra lacus. Mauris posuere ullamcorper leo, sit amet ullamcorper erat maximus a. Donec libero nisi, molestie ut augue ut, sollicitudin lobortis diam. Aliquam non arcu pellentesque nisl convallis blandit. Mauris viverra viverra nibh, vel fermentum massa congue quis. Pellentesque viverra sit amet nunc in elementum. Aenean nec quam at elit suscipit pretium. Morbi in leo et libero finibus varius non varius diam. Nulla nulla mi, tempor at lacus sit amet, gravida euismod est. ', '#1#', '2021-03-04 20:33:54'),
+(25, 'Reprise des cours primaire', 'class2.jpg', '         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet viverra arcu. Curabitur sed vestibulum arcu. Curabitur pulvinar lorem in lectus finibus, vel posuere mi luctus. Pellentesque dapibus turpis ut tortor lobortis molestie. Integer erat nunc, sollicitudin ac interdum in, pellentesque ut purus. Suspendisse pulvinar ipsum vel tortor luctus pretium. Mauris commodo elementum sem, nec aliquam enim congue eget. Suspendisse ac massa at risus pharetra suscipit.\r\n\r\nCras ac porta est. Vivamus nunc odio, egestas vitae orci vel, tincidunt pharetra dolor. Maecenas facilisis, lorem non egestas iaculis, dolor felis consectetur quam, nec pharetra magna mi eget dolor. Mauris fermentum quam id felis cursus cursus. Nullam placerat, nisl non pellentesque lobortis, nibh dui tempor quam, et convallis nunc ex nec nunc. Etiam ultricies sagittis nisi, at ullamcorper odio tristique ut. Nunc vitae molestie mauris. Donec pulvinar sed lorem eget posuere. Cras mattis mi nec felis vehicula, quis luctus lorem aliquet. Curabitur lacus arcu, vulputate id orci luctus, maximus rhoncus mi. Nulla ut velit ultrices dolor pretium commodo sed sed felis. Integer iaculis felis a dolor placerat tristique. Integer tempus sollicitudin dolor, sed molestie dolor porta non. Nulla aliquam vulputate imperdiet. ', '#2#', '2021-03-04 21:01:30'),
+(26, 'Excursion scolaire musée', 'mus.jpeg', ' Duis quis auctor nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed pretium suscipit diam eu hendrerit. Sed ac urna nibh. Proin vel tincidunt velit. Vivamus pulvinar libero fermentum pharetra pellentesque. Vestibulum placerat velit nec blandit tempus. Curabitur et ultricies erat. Pellentesque ante leo, aliquam vitae turpis ac, congue elementum ex. Vestibulum tempus, augue et scelerisque dictum, ex sem euismod mi, sit amet placerat ex diam ac justo. Suspendisse mollis pellentesque velit, tincidunt facilisis odio rhoncus sed. Praesent a lectus sagittis, finibus diam vel, fermentum dui. Morbi eget tellus consequat, venenatis ante eu, tristique sem. Nullam ullamcorper lacinia pretium. Nulla sed rutrum lectus. In sit amet nisi cursus libero accumsan sodales sed maximus erat. \r\n\r\n Sed elementum mauris in eros pellentesque luctus. Cras ullamcorper posuere placerat. Phasellus at mollis nulla, non commodo risus. Sed hendrerit massa sed nunc ultrices, eget sagittis turpis porttitor. Cras ante odio, imperdiet sed blandit finibus, pellentesque vel ipsum. Phasellus aliquet scelerisque ante et euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Donec semper faucibus nisl, at scelerisque tellus volutpat et. Sed leo risus, ornare sit amet viverra vulputate, ornare vel metus. Mauris pharetra, justo ut commodo ornare, sapien purus tempor elit, eget euismod nisl arcu sit amet arcu. ', '#5#6#', '2021-03-12 22:55:18'),
+(27, 'Planning 1er trimestre', 'planning.webp', ' Nulla facilisi. Fusce non volutpat turpis. Aenean quis neque id leo malesuada posuere id eget mi. Vivamus non placerat magna, vitae mattis quam. Cras vulputate posuere nisl ut sodales. Phasellus eu arcu libero. Pellentesque imperdiet nunc vel faucibus vehicula. In dignissim id felis quis ultrices.\r\n\r\nCras pulvinar nunc ac erat accumsan euismod. Mauris pulvinar ultricies suscipit. Phasellus ante mauris, facilisis at lacus a, euismod mollis dui. Etiam ipsum ex, ullamcorper vel imperdiet quis, rhoncus a arcu. In fermentum bibendum fringilla. Morbi erat ligula, condimentum vel est eget, facilisis malesuada mi. Aliquam mollis tincidunt nibh, volutpat vulputate odio fermentum id. Duis congue risus ac ligula facilisis ultricies. Sed convallis odio et metus porttitor, eu posuere lorem imperdiet. Donec et nunc ornare, imperdiet neque in, molestie libero. Suspendisse sed nunc quis leo lacinia varius a ut massa. Integer nec molestie lacus. Nullam viverra ligula in sagittis hendrerit. Vivamus id blandit neque. ', '#1#', '2021-01-12 23:03:53'),
+(28, 'Lancement site web', 'image1.jpg', ' Sed elementum mauris in eros pellentesque luctus. Cras ullamcorper posuere placerat. Phasellus at mollis nulla, non commodo risus. Sed hendrerit massa sed nunc ultrices, eget sagittis turpis porttitor. Cras ante odio, imperdiet sed blandit finibus, pellentesque vel ipsum. Phasellus aliquet scelerisque ante et euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Donec semper faucibus nisl, at scelerisque tellus volutpat et. Sed leo risus, ornare sit amet viverra vulputate, ornare vel metus. Mauris pharetra, justo ut commodo ornare, sapien purus tempor elit, eget euismod nisl arcu sit amet arcu.\r\n\r\nNulla facilisi. Fusce non volutpat turpis. Aenean quis neque id leo malesuada posuere id eget mi. Vivamus non placerat magna, vitae mattis quam. Cras vulputate posuere nisl ut sodales. Phasellus eu arcu libero. Pellentesque imperdiet nunc vel faucibus vehicula. In dignissim id felis quis ultrices. ', '#1#', '2021-01-06 23:12:13');
 
 -- --------------------------------------------------------
 
@@ -180,7 +179,12 @@ INSERT INTO `Food` (`id`, `day`, `menu`) VALUES
 (2, '2021-03-01', 'Soupe + Riz'),
 (3, '2021-03-02', 'Haricot + Viande'),
 (5, '2021-03-03', 'Pates + thon'),
-(6, '2021-03-04', 'Lantilles + patté');
+(6, '2021-03-04', 'Lantilles + patté'),
+(14, '2021-03-07', 'Riz + Poulet + Jus'),
+(15, '2021-03-08', 'Lentilles +Thon + Yaourt'),
+(16, '2021-03-09', 'Haricot + Viande + Tarte'),
+(17, '2021-03-10', 'Couscous + Poulet + Dattes'),
+(18, '2021-03-11', 'Pâtes + Viande + Yaourt');
 
 -- --------------------------------------------------------
 
@@ -252,13 +256,15 @@ CREATE TABLE `Person` (
 
 INSERT INTO `Person` (`id`, `last_name`, `first_name`, `address`, `phone1`, `phone2`, `phone3`, `mail`, `passwd_hash`) VALUES
 (1, 'admin', 'admin', 'adresse', '0000000000', '0000000000', '0000000000', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-(2, 'Prof1', 'Ahmed', 'Alger', '0545346245', 'N/A', 'N/A', 'simoh@esi.dz', ''),
-(3, 'Prof2', 'Mohamed', 'Alger', '0737827743', 'N/A', 'N/A', 'smahat@esi.dz', ''),
-(4, 'Etudiant1', 'Reda', 'Alger', '0553492859', '0555493853', 'N/A', 'morsli@esi.dz', '3de86576bd3033b6d462cdd9e6c14c8a'),
-(5, 'Etudiant2', 'Ilyes', 'Tizi', '0539483722', 'N/A', 'N/A', 'bacha@esi.dz', 'd41d8cd98f00b204e9800998ecf8427e'),
-(6, 'Parent1', 'Hamid', 'home', '0539847384', 'N/A', 'N/A', 'hamid@gmail.com', '37fff357c237d67f2365eab6706bc898'),
-(7, 'Parent2', 'Mustapha', 'Tizi', '0634245464', 'N/A', 'N/A', 'bacha@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e'),
-(25, 'Morsli', 'Yacine', 'N/A', 'Home', 'N/A', 'N/A', 'yacine@esi.dz', '');
+(2, 'Prof1', 'Ahmed', 'Alger', '0545346245', 'N/A', 'N/A', 'prof1@school.com', ''),
+(3, 'Prof2', 'Mohamed', 'Alger', '0737827743', 'N/A', 'N/A', 'prof2@school.com', ''),
+(4, 'Etudiant1', 'Reda', 'Alger', '0553492859', '0555493853', 'N/A', 'etudiant1@school.com', '8f829d59bb9378e0b10f1eb5779fb0f8'),
+(5, 'Etudiant2', 'Ilyes', 'Tizi', '0539483722', 'N/A', 'N/A', 'etudiant2@school.com', '96e0ccf22f04131824b5c6a020d96d2e'),
+(6, 'Parent1', 'Hamid', 'Alger', '0539847384', 'N/A', 'N/A', 'parent1@school.com', '34f83b4b453db075f374fa73365b8283'),
+(7, 'Parent2', 'Mustapha', 'Tizi', '0634245464', 'N/A', 'N/A', 'parent2@school.com', 'df7d26c91d5b0b52c51f813d4f335833'),
+(25, 'Etudiant3', 'Yacine', 'Alger', '0554960384', 'N/A', 'N/A', 'etudiant3@schoo.com', '0286c837a48dd30041fa8b2db7672660'),
+(26, 'Prof3', 'Amina', 'Blida', '0556352535', 'N/A', 'N/A', 'prof3@school.com', ''),
+(27, 'Prof4', 'Hakim', 'Alger', '06346434', 'N/A', 'N/A', 'prof4@school.com', '');
 
 -- --------------------------------------------------------
 
@@ -282,16 +288,48 @@ CREATE TABLE `Program` (
 
 INSERT INTO `Program` (`id`, `teacher`, `classroom`, `subject`, `day`, `start`, `end`) VALUES
 (2, 2, 1, 1, 4, '10:00:00', '12:00:00'),
-(3, 3, 1, 2, 1, '11:30:00', '12:00:00'),
+(3, 3, 1, 2, 1, '15:05:00', '16:00:00'),
 (4, 3, 1, 2, 2, '08:00:00', '10:00:00'),
-(5, 2, 2, 3, 3, '08:00:00', '10:00:00'),
-(6, 3, 2, 6, 5, '13:00:00', '15:00:00'),
+(5, 27, 2, 3, 3, '08:00:00', '10:00:00'),
 (8, 2, 1, 1, 3, '08:00:00', '00:00:00'),
 (9, 3, 1, 2, 5, '08:00:00', '12:00:00'),
 (10, 2, 3, 5, 4, '08:00:00', '10:00:00'),
 (13, 2, 1, 1, 1, '08:00:00', '10:02:00'),
-(14, 2, 1, 1, 1, '21:00:00', '21:00:00'),
-(16, 2, 1, 1, 1, '10:00:00', '11:30:00');
+(14, 2, 1, 1, 1, '13:00:00', '15:00:00'),
+(17, 26, 1, 7, 1, '10:05:00', '12:00:00'),
+(18, 2, 1, 1, 2, '10:05:00', '12:00:00'),
+(19, 2, 1, 1, 2, '13:00:00', '14:30:00'),
+(20, 3, 1, 2, 3, '10:05:00', '12:00:00'),
+(21, 3, 1, 2, 4, '10:00:00', '12:00:00'),
+(22, 2, 1, 7, 4, '13:00:00', '15:00:00'),
+(23, 2, 1, 1, 5, '10:05:00', '12:00:00'),
+(24, 2, 1, 2, 5, '13:00:00', '14:00:00'),
+(25, 2, 1, 1, 5, '14:05:00', '15:00:00'),
+(26, 27, 2, 3, 1, '08:00:00', '10:00:00'),
+(27, 2, 2, 11, 1, '10:05:00', '12:00:00'),
+(28, 27, 2, 4, 1, '13:00:00', '15:00:00'),
+(29, 2, 2, 8, 1, '15:05:00', '16:00:00'),
+(30, 2, 2, 10, 2, '08:00:00', '10:00:00'),
+(31, 2, 2, 9, 2, '10:05:00', '12:00:00'),
+(32, 2, 2, 3, 2, '13:00:00', '15:00:00'),
+(33, 2, 2, 11, 2, '15:05:00', '16:00:00'),
+(34, 2, 2, 11, 3, '10:05:00', '12:00:00'),
+(35, 2, 2, 4, 4, '08:00:00', '10:00:00'),
+(36, 2, 2, 11, 4, '10:00:00', '12:00:00'),
+(37, 2, 2, 8, 4, '13:00:00', '14:00:00'),
+(38, 2, 2, 9, 5, '08:00:00', '10:05:00'),
+(39, 27, 2, 3, 5, '10:05:00', '12:00:00'),
+(40, 27, 2, 4, 5, '13:00:00', '15:00:00'),
+(41, 27, 3, 12, 1, '08:00:00', '10:00:00'),
+(42, 3, 3, 5, 1, '10:00:00', '12:00:00'),
+(43, 26, 3, 6, 1, '13:00:00', '15:00:00'),
+(44, 27, 3, 13, 2, '08:00:00', '10:05:00'),
+(45, 2, 3, 14, 2, '10:00:00', '12:00:00'),
+(46, 26, 3, 6, 3, '08:00:00', '12:00:00'),
+(47, 27, 3, 13, 4, '10:05:00', '12:00:00'),
+(48, 27, 3, 12, 4, '13:00:00', '15:00:00'),
+(49, 3, 3, 14, 5, '08:00:00', '10:00:00'),
+(50, 2, 3, 6, 5, '10:00:00', '12:00:00');
 
 -- --------------------------------------------------------
 
@@ -312,7 +350,10 @@ CREATE TABLE `Reception` (
 --
 
 INSERT INTO `Reception` (`id`, `teacher`, `day`, `start`, `end`) VALUES
-(1, 2, 3, '14:00:00', '16:00:00');
+(1, 2, 3, '14:00:00', '16:00:00'),
+(3, 26, 5, '13:00:00', '17:00:00'),
+(4, 27, 3, '13:00:00', '15:00:00'),
+(6, 3, 2, '15:00:00', '17:00:00');
 
 -- --------------------------------------------------------
 
@@ -425,9 +466,17 @@ INSERT INTO `Subject` (`id`, `name`, `year`, `coeff`, `color`) VALUES
 (1, 'Arabe', 1, 1, '#ff000088'),
 (2, 'Français', 1, 1, '#0000ff88'),
 (3, 'Maths', 2, 1, '#00ffff88'),
-(4, 'Physique', 2, 1, '#ffffff'),
-(5, 'Science', 3, 1, '#ffffff'),
-(6, 'Info', 3, 1, '#000000ee');
+(4, 'Physique', 2, 1, '#2A2E45'),
+(5, 'Science', 3, 1, '#00FF00'),
+(6, 'Info', 3, 1, '#000000ee'),
+(7, 'Anglais', 1, 1, '#5D2A42'),
+(8, 'Histoire', 2, 1, '#7A542E'),
+(9, 'Géographie', 2, 1, '#9BA2FF'),
+(10, 'Physique', 2, 1, '#2A2E45'),
+(11, 'Arabe', 2, 1, '#9E8576'),
+(12, 'Electricité', 3, 1, '#ffff3f'),
+(13, 'Chimie', 3, 1, '#00509d'),
+(14, 'Philosophie', 3, 1, '#ce4257');
 
 -- --------------------------------------------------------
 
@@ -469,7 +518,9 @@ CREATE TABLE `Teacher` (
 
 INSERT INTO `Teacher` (`id`) VALUES
 (2),
-(3);
+(3),
+(26),
+(27);
 
 -- --------------------------------------------------------
 
@@ -640,7 +691,7 @@ ALTER TABLE `Activity`
 -- AUTO_INCREMENT for table `Article`
 --
 ALTER TABLE `Article`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `Classroom`
@@ -664,7 +715,7 @@ ALTER TABLE `CycleInfo`
 -- AUTO_INCREMENT for table `Food`
 --
 ALTER TABLE `Food`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `Mark`
@@ -682,19 +733,19 @@ ALTER TABLE `Paragraph`
 -- AUTO_INCREMENT for table `Person`
 --
 ALTER TABLE `Person`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `Program`
 --
 ALTER TABLE `Program`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `Reception`
 --
 ALTER TABLE `Reception`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `Registration`
@@ -712,7 +763,7 @@ ALTER TABLE `SchoolYear`
 -- AUTO_INCREMENT for table `Subject`
 --
 ALTER TABLE `Subject`
-  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `Tag`

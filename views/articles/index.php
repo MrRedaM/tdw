@@ -1,16 +1,16 @@
 <div class="image_slider">
         <div class="slides">
           <div class="slide">
+            <img src="<?= PRE ?>/res/images/school1.jpg" alt="">
+          </div>
+          <div class="slide">
             <img src="<?= PRE ?>/res/images/bibli.jpg" alt="">
           </div>
           <div class="slide">
-            <img src="<?= PRE ?>/res/images/image3.jpg" alt="">
+            <img src="<?= PRE ?>/res/images/school2.jpg" alt="">
           </div>
           <div class="slide">
-            <img src="<?= PRE ?>/res/images/swim.jpg" alt="">
-          </div>
-          <div class="slide">
-            <img src="<?= PRE ?>/res/images/image4.jpg" alt="">
+            <img src="<?= PRE ?>/res/images/primary1.jpg" alt="">
           </div>
         </div>
 </div>

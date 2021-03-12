@@ -9,7 +9,7 @@ class AccountModel extends Model{
 
     public function insertPerson($last, $first, $mail, $address, $phone1, $phone2, $phone3){
         $sql = "INSERT INTO ".$this->personTable." (`id`, `last_name`, `first_name`, `address`, `phone1`, `phone2`, `phone3`, `mail`, `passwd_hash`) 
-        VALUES (NULL, '".$last."', '".$first."', '".$phone3."', '".$address."', '".$phone1."', '".$phone2."', '".$mail."', '')";
+        VALUES (NULL, '".$last."', '".$first."', '".$address."', '".$phone1."', '".$phone2."', '".$phone3."', '".$mail."', '')";
         return $this->request($sql);
     }
 
@@ -20,7 +20,7 @@ class AccountModel extends Model{
 
     public function updatePerson($id, $last, $first, $mail, $address, $phone1, $phone2, $phone3){
         $sql = "UPDATE ".$this->personTable."
-        SET last_name = '".$last."', first_name = '".$first."', address = '".$address."', phone1 = '".$phone1."', phone2 = '".$phone2."', phone3 = '".$phone3."'
+        SET last_name = '".$last."', first_name = '".$first."', address = '".$address."', phone1 = '".$phone1."', phone2 = '".$phone2."', phone3 = '".$phone3."', mail = '".$mail."' 
         WHERE id = ".$id;
         return $this->request($sql);
     }
