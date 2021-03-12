@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/tdw/res/css/account.css">
     <link rel="stylesheet" href="/tdw/res/css/marks.css">
     <link rel="stylesheet" href="/tdw/res/css/activities.css">
+    <link rel="stylesheet" href="/tdw/res/css/slider.css">
     
 </head>
 
@@ -51,17 +52,6 @@
             <a hidden target="_blank" href="http://whatsapp.com"><img src="<?= PRE ?>/res/images/whatsapp.png" alt=""></a>
             <a target="_blank" href="http://youtube.com"><img src="<?= PRE ?>/res/images/youtube.png" alt=""></a>
         </div>
-
-        <h3 hidden><a href="<?= PRE ?>/admin">Admin Panel (temp)</a></h3>
-        <ul hidden>
-            <li><a href="<?= PRE ?>/admin_articles">Articles</a></li>
-            <li><a href="<?= PRE ?>/admin_presentation">Présentations</a></li>
-            <li><a href="<?= PRE ?>/admin_calendar">Emplois du temps</a></li>
-            <li><a href="<?= PRE ?>/admin_teachers">Enseignants</a></li>
-            <li><a href="<?= PRE ?>/admin_accounts">Comptes</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Paramètres</a></li>
-        </ul>
     </header>
 
     <main>
@@ -69,6 +59,37 @@
     </main>
 
     <footer>
+        <div class="bottom_menu">
+            <div class="logo">
+                <img src="<?= PRE ?>/res/images/logo.png" alt="">
+                <h1>MySchool</h1>
+            </div>
+            <div>
+                <p>Notre école</p>
+                <ul>
+                    <li><a href="<?= PRE ?>/articles">Accueil</a></li>
+                    <li><a href="<?= PRE ?>/presentation">Présentation</a></li>
+                    <li><a href="<?= PRE ?>/contact">Contact</a></li>
+                </ul>                
+            </div>
+            <div>
+                <p>Cycles</p>
+                <ul>
+                    <li><a href="<?= PRE ?>/primary">Primaire</a></li>
+                    <li><a href="<?= PRE ?>/secondary">Moyen</a></li>
+                    <li><a href="<?= PRE ?>/highschool">Lycéé</a></li>
+                </ul>
+            </div>
+            <div>
+                <p>Membres</p>
+                <ul>
+                    <li><a href="<?= PRE ?>/student">Espace élève</a></li>
+                    <li><a href="<?= PRE ?>/parents">Espace parent</a></li>
+                    <li><a href="<?= PRE ?>/teacher">Espace enseignant</a></li>
+                </ul>
+                
+            </div>
+        </div>
         <p>Copyright ©  2020-2021 MySchool. All rights reserved.</p>
     </footer>
 </body>

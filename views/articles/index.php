@@ -1,3 +1,20 @@
+<div class="image_slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="<?= PRE ?>/res/images/bibli.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="<?= PRE ?>/res/images/image3.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="<?= PRE ?>/res/images/swim.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="<?= PRE ?>/res/images/image4.jpg" alt="">
+          </div>
+        </div>
+</div>
+
 <h1 class="section_title">Actualités</h1>
 
 <div class="grid_container">

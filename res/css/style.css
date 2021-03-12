@@ -112,6 +112,7 @@ header {
 .top_menu{
     margin: auto;
     height: 100%;
+    z-index: 2;
 }
 
 .top_menu ul{
@@ -178,4 +179,35 @@ footer p{
 
 footer *{
     text-align: center;
+}
+
+.bottom_menu{
+    display: flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content: space-evenly;
+    gap: 2em;
+    padding-bottom: 2em;
+}
+
+.bottom_menu ul{
+    list-style: none;
+}
+
+.bottom_menu p{
+    font-family: 'Montserrat-SemiBold';
+    font-size: 120%;
+    text-align: left;
+    padding-bottom: 0.5em;
+}
+
+.bottom_menu li{
+    text-align: left;
+    font-family: 'Montserrat-Medium';
+    padding: 0.5em 0 0.5em 0;
+}
+
+.bottom_menu .logo{
+    margin: auto 0;
 }
